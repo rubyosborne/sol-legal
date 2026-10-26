@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOL Privacy Policy</title>
+<meta name="description" content="Privacy Policy for SOL: what data is collected, where it is stored, who processes it, and your rights under the New Zealand Privacy Act 2020.">
+<style>
+  :root {
+    --ground: #FBFAF7;
+    --card: #FFFFFF;
+    --ink: #221F2B;
+    --muted: #5C5869;
+    --accent: #8400FF;
+    --accent-soft: #F3ECFF;
+    --line: #E8E3DB;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  main { max-width: 38rem; margin: 0 auto; }
+  a { color: var(--accent); }
+  .back { display: inline-block; font-size: 0.9rem; margin-bottom: 1.75rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.25rem;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 1.1875rem;
+    line-height: 1.3;
+    margin: 2.5rem 0 0.75rem;
+    color: var(--accent);
+  }
+  h3 { font-size: 1rem; margin: 1.75rem 0 0.5rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.75rem; }
+  p { margin: 0 0 1.1rem; }
+  ul, ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+  li { margin-bottom: 0.5rem; }
+  .summary {
+    background: var(--accent-soft);
+    border: 1px solid #DFCDFF;
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem 0.5rem;
+    margin: 0 0 2rem;
+  }
+  .summary h2 {
+    margin: 0 0 0.6rem;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .summary ul { padding-left: 1.2rem; margin-bottom: 0.75rem; }
+  .summary li { margin-bottom: 0.4rem; }
+  .summary p.note { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.9rem; }
+  .callout {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.15rem 0.1rem;
+    margin: 0 0 1.5rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid #DFCDFF;
+    vertical-align: 0.1em;
+  }
+  footer {
+    margin-top: 3rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.25rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="index.html">&larr; SOL legal</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2026-10-26</p>
+
+  <div class="summary">
+    <h2>The short version</h2>
+    <p class="note">This summary is here to be read. The full policy below is the complete picture.</p>
+    <ul>
+      <li>SOL collects what you tell it (onboarding answers, chat, training logs, check-ins) and the Apple Health data you explicitly grant.</li>
+      <li>You can skip any sensitive question. Cycle tracking is off unless you turn it on.</li>
+      <li>Your data is stored in Amazon Web Services in <strong>Sydney, Australia</strong>.</li>
+      <li>Two companies touch it, both as processors working for SOL: <strong>Anthropic</strong>, to generate your briefs, plans and replies, and <strong>AWS</strong>, to host it. Under Anthropic's commercial API terms, what SOL sends and receives is not used to train Anthropic's models.</li>
+      <li><strong>Nobody else gets it.</strong> There are no analytics SDKs, no crash reporters, no advertising, no data brokers. Your data is not sold, ever.</li>
+      <li>Your data is used to run SOL for you. That is the only reason it is processed.</li>
+      <li>You can ask for a copy, a correction, or full deletion by emailing <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>.</li>
+    </ul>
+  </div>
+
+  <p>
+    SOL is built and run by Ruby Osborne in Auckland, New Zealand ("we", "us",
+    "I"). This policy explains what personal information SOL collects, why,
+    where it goes, and what you can do about it. It is written to match how
+    SOL actually works, not to describe a generic app.
+  </p>
+  <p>
+    The <strong>New Zealand Privacy Act 2020</strong> and its information
+    privacy principles are the frame for this policy. SOL handles health
+    information, which the Act treats seriously, and so do we.
+  </p>
+  <p>
+    Any question about this policy, or about your own data, goes to
+    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>.
+  </p>
+
+  <h2>1. What SOL collects</h2>
+  <p>
+    Everything below either comes from you directly or comes from Apple Health
+    with your explicit permission. SOL does not buy data, scrape data, or
+    collect information about you from anywhere else.
+  </p>
+
+  <h3>Account information</h3>
+  <ul>
+    <li>
+      The account identifier that <strong>Sign in with Apple</strong> gives
+      us, plus whatever name or email address Apple passes on at sign-in.
+      Apple lets you hide your real address behind its private relay, and if
+      you do, that relay address is all we see.
+    </li>
+    <li>
+      A session token for each device you sign in on. We store these
+      <strong>hashed</strong>, not in plain text, and signing out revokes the
+      session.
+    </li>
+    <li>
+      There is no SOL password. We never see, hold or store one.
+    </li>
+  </ul>
+
+  <h3>Onboarding questionnaire</h3>
+  <p>What you tell SOL when you set it up:</p>
+  <ul>
+    <li>your name (or whatever you would like to be called);</li>
+    <li>your goals;</li>
+    <li>your current training: what you do, how often, how hard;</li>
+    <li>how you have been feeling lately, in your own words;</li>
+    <li><span class="tag">optional</span> body facts, such as your birth year and height;</li>
+    <li><span class="tag">optional</span> menstrual-cycle preferences, including whether you want cycle-aware guidance at all.</li>
+  </ul>
+  <p>
+    <strong>You can skip any sensitive question.</strong> Cycle questions
+    include a "rather not say" option, and cycle tracking is opt-in: if you do
+    not opt in, SOL does not read or use cycle data. Skipping a question means
+    SOL has less context, not that SOL stops working.
+  </p>
+
+  <h3>Apple Health data</h3>
+  <p>
+    Only the categories you explicitly grant in the iOS permission sheet. The
+    categories SOL asks for are:
+  </p>
+  <ul>
+    <li>sleep</li>
+    <li>steps</li>
+    <li>heart rate</li>
+    <li>heart rate variability (HRV)</li>
+    <li>weight</li>
+    <li>workouts</li>
+    <li><span class="tag">opt-in only</span> cycle data, read only if you have turned cycle tracking on</li>
+  </ul>
+  <p>
+    If you deny a category, SOL does not receive it. See section 5 for how
+    Apple Health data is handled and how to revoke access.
+  </p>
+
+  <h3>What you create while using SOL</h3>
+  <ul>
+    <li>your chat messages with SOL, and SOL's replies;</li>
+    <li>your training logs: sessions, loads, how they went;</li>
+    <li>your check-ins.</li>
+  </ul>
+
+  <h3>What SOL does not collect</h3>
+  <ul>
+    <li>No advertising identifiers, device fingerprints or location tracking.</li>
+    <li>No analytics about how you tap around the app.</li>
+    <li>No contacts, photos, microphone or camera access for data collection.</li>
+    <li>No payment details. SOL is currently free, and any future purchase would go through Apple, which does not pass us your card details.</li>
+  </ul>
+
+  <h2>2. Why SOL processes it</h2>
+  <p>
+    One reason: <strong>to run the service you signed up for.</strong>
+    Specifically, to:
+  </p>
+  <ul>
+    <li>generate your daily brief;</li>
+    <li>generate and adjust your weekly training plan;</li>
+    <li>answer you in chat with your own context in mind;</li>
+    <li>show your own history back to you;</li>
+    <li>keep your account secure and working, and diagnose problems in SOL itself.</li>
+  </ul>
+  <p>
+    That is the whole list. Your data is not used for advertising, for
+    profiling you for anyone else's benefit, for market research, or for
+    training AI models.
+  </p>
+
+  <h2>3. Where it is stored</h2>
+  <p>
+    SOL's backend runs on <strong>Amazon Web Services</strong> in the
+    <strong>Asia Pacific (Sydney) region, ap-southeast-2</strong>. Your data
+    is stored in <strong>Amazon DynamoDB</strong> in that region.
+  </p>
+  <p>
+    Sydney is in Australia, so your information is held outside New Zealand.
+    AWS is contractually bound to protect it and processes it only on our
+    instructions. Generating your briefs, plans and replies also involves
+    sending data to Anthropic, which is based in the United States (see
+    section 4).
+  </p>
+
+  <h2>4. Who else touches your data</h2>
+  <p>
+    Two providers, both acting as processors for SOL, under their own terms and
+    on our instructions. Nobody else.
+  </p>
+
+  <h3>Anthropic, as the AI processor</h3>
+  <p>
+    SOL's briefs, weekly plans and chat replies are generated by
+    <strong>Anthropic's Claude models</strong>, accessed through the Anthropic
+    API. To do that, the data a given feature needs is sent to Anthropic for
+    generation. That can include your onboarding answers, relevant health and
+    training metrics, your logs and check-ins, and your chat messages.
+  </p>
+  <p>Two things matter here:</p>
+  <ul>
+    <li>
+      <strong>Anthropic does not train on it.</strong> Under Anthropic's
+      commercial API terms, inputs sent to the API and outputs returned are
+      not used to train Anthropic's models.
+    </li>
+    <li>
+      <strong>Only what is needed is sent.</strong> Data goes to Anthropic to
+      produce something for you, and for no other purpose.
+    </li>
+  </ul>
+
+  <h3>Amazon Web Services, as the host</h3>
+  <p>
+    AWS provides the servers, the database and the infrastructure SOL runs on,
+    in Sydney. AWS stores and transmits your data on our behalf and does not
+    use it for its own purposes.
+  </p>
+
+  <h3>Who does not get your data</h3>
+  <div class="callout">
+    <p>
+      <strong>No analytics, no ads, no brokers, no sale.</strong> SOL
+      deliberately contains <strong>no third-party analytics SDKs, no crash
+      or error reporting services, no advertising SDKs and no tracking
+      libraries</strong>. We do not work with data brokers. We do not sell,
+      rent or trade your personal information, and there is no advertising in
+      SOL.
+    </p>
+    <p>
+      <strong>Your health-related text is not shared with any third party</strong>
+      other than the AI processor and the host named above. That includes your
+      chat messages, your check-ins and anything you have written about how
+      you feel.
+    </p>
+  </div>
+  <p>
+    The one exception we have to name: if we were legally required to disclose
+    information, for example under a valid court order, we would comply, and
+    we would tell you unless we were legally prohibited from doing so.
+  </p>
+  <p>
+    If SOL were ever transferred to someone else, we would tell you before
+    your data moved, and you would have the chance to delete it first.
+  </p>
+
+  <h2>5. Apple Health data, specifically</h2>
+  <p>
+    Health data from Apple Health gets its own rules, both under Apple's
+    HealthKit requirements and under this policy:
+  </p>
+  <ul>
+    <li>
+      <strong>Only what you grant.</strong> SOL reads only the categories you
+      allow in the iOS permission sheet, and nothing else in Apple Health.
+    </li>
+    <li>
+      <strong>You can revoke it at any time</strong>, in
+      <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Health &rsaquo; SOL</em>
+      on your iPhone, per category. SOL stops receiving that data straight
+      away. Revoking does not delete what SOL already holds, so email us if
+      you want that removed too.
+    </li>
+    <li>
+      <strong>Never used for advertising or marketing.</strong> Apple Health
+      data is never used for advertising, marketing, re-targeting or any
+      similar purpose, and is never sold or shared with data brokers.
+    </li>
+    <li>
+      <strong>Used only to provide SOL's health and fitness features</strong>,
+      which is what you granted it for.
+    </li>
+    <li>
+      <strong>Cycle data is opt-in.</strong> If you have not opted in, SOL
+      does not request or use it.
+    </li>
+  </ul>
+
+  <h2>6. How it is protected</h2>
+  <ul>
+    <li>Sign in with Apple only, so there is no SOL password to be guessed, reused or breached.</li>
+    <li>Session tokens are stored hashed, and signing out revokes them.</li>
+    <li>Data moves between the app, the backend and our processors over encrypted connections (HTTPS/TLS).</li>
+    <li>Data at rest in DynamoDB is encrypted by AWS.</li>
+    <li>Access to the backend is limited to the owner, and your data is only ever processed to run your own account.</li>
+  </ul>
+  <p>
+    Being straight with you: SOL is a small product run by one person. We take
+    this seriously and have deliberately kept the number of parties who touch
+    your data as small as possible, which is itself a security decision. But
+    no system is perfectly secure, and we cannot guarantee that nothing will
+    ever go wrong. Section 8 says what we will do if it does.
+  </p>
+
+  <h2>7. How long it is kept, and deletion</h2>
+  <p>
+    Your information is kept <strong>while your account is active</strong>,
+    because SOL's whole value is continuity: your plan next week depends on
+    your weeks before it.
+  </p>
+  <p>
+    <strong>We will delete your account and your data on request.</strong>
+    Email <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>
+    from the address linked to your account, or tell us enough to identify it,
+    and ask for deletion. We will confirm, delete your account and the
+    personal information held against it, and confirm again when it is done.
+    We aim to do this within 30 days of verifying the request. If a copy
+    remains in a routine system backup, it is removed as those backups cycle,
+    and it is not used for anything in the meantime.
+  </p>
+  <div class="callout">
+    <p>
+      <strong>Please note:</strong> deletion is currently handled by email
+      request rather than a button inside the app. An in-app account deletion
+      flow is being built. Until it ships, the email route above is how you
+      exercise this, and we will action it.
+    </p>
+  </div>
+  <p>
+    You can also ask us to delete a specific part of your data, for example
+    your cycle data or a particular conversation, without closing your
+    account.
+  </p>
+  <p>
+    If you ask us to delete information we are legally required to keep, we
+    will tell you what and why, and delete the rest.
+  </p>
+
+  <h2>8. If something goes wrong</h2>
+  <p>
+    If there is a privacy breach that has caused, or is likely to cause,
+    serious harm to you, the Privacy Act 2020 requires us to notify the
+    <strong>Office of the Privacy Commissioner</strong> and the people
+    affected as soon as practicable. We commit to that, and specifically:
+  </p>
+  <ul>
+    <li>we will tell you what happened, what information was involved and when;</li>
+    <li>we will tell you what we are doing about it and what you may want to do;</li>
+    <li>we will not wait for certainty to warn you if waiting would leave you exposed;</li>
+    <li>we will notify the Privacy Commissioner where the Act requires it.</li>
+  </ul>
+
+  <h2>9. Your rights</h2>
+  <p>Under the New Zealand Privacy Act 2020 you can:</p>
+  <ul>
+    <li>
+      <strong>Access your information.</strong> Ask for a copy of the personal
+      information SOL holds about you, and we will provide it.
+    </li>
+    <li>
+      <strong>Correct it.</strong> If something is wrong, ask us to fix it. If
+      we disagree, you can ask us to attach a statement of your requested
+      correction, and we will.
+    </li>
+    <li>
+      <strong>Have it deleted.</strong> As described in section 7.
+    </li>
+    <li>
+      <strong>Withdraw permissions.</strong> Revoke Apple Health categories in
+      iOS Settings, turn cycle tracking off, or stop using SOL entirely.
+    </li>
+    <li>
+      <strong>Complain.</strong> Email us first and we will try to sort it out.
+      You can also complain to the Office of the Privacy Commissioner at
+      <a href="https://www.privacy.org.nz">privacy.org.nz</a>, and you do not
+      need our permission to do that.
+    </li>
+  </ul>
+  <p>
+    All requests go to
+    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>. We
+    will respond as soon as we can and within 20 working days, as the Act
+    requires. We may need to confirm you are who you say you are before
+    releasing or deleting health information, which protects you.
+  </p>
+
+  <h2>10. Children</h2>
+  <p>
+    SOL is not directed at children and is not intended for anyone under 16.
+    We do not knowingly collect personal information from under-16s. If you
+    believe a child has created an account, email
+    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a> and we
+    will delete the account and its data.
+  </p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>
+    SOL is still being built, so this policy will change as the app does. When
+    it changes we will update this page and the "Last updated" date at the
+    top. If a change materially affects how your personal information is
+    collected, used or shared, for example a new processor or a new data
+    category, we will tell you in the app or by email before it takes effect,
+    and where consent is needed we will ask for it rather than assume it.
+  </p>
+  <p>Older versions are available on request.</p>
+
+  <h2>12. Contact</h2>
+  <p>
+    Ruby Osborne, Auckland, New Zealand.<br>
+    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="index.html">SOL legal</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+</main>
+</body>
+</html>
