@@ -149,6 +149,7 @@
     <li>your goals, plan, training history and logs, and your notes, check-ins and pain entries;</li>
     <li>recent Apple Health numbers (daily values for up to the last 28 days), such as sleep, heart rate, heart rate variability, weight, workouts, nutrition and, if you track it, your cycle, plus the scores and trends SOL works out from them;</li>
     <li>your chat messages;</li>
+    <li>the short list of things SOL remembers about you (see <a href="#memory">What the AI remembers</a>);</li>
     <li>SOL's own earlier plans and briefs, so its advice stays consistent;</li>
     <li>for the monthly report, the text of lab results or scans you add;</li>
     <li>if you train together with someone, the goal's name and its owner's display name.</li>
@@ -173,10 +174,23 @@
 
   <h2 id="memory">What the AI remembers</h2>
   <p>
-    Nothing between requests. Claude starts fresh every time, and SOL sends
-    what's needed with each request. (Anthropic keeps a short cache for about
-    5 minutes so repeated requests are faster.) What SOL "remembers" about you
-    lives in your account in Sydney.
+    Claude itself remembers nothing between requests. It starts fresh every
+    time, and SOL sends what's needed with each request. (Anthropic keeps a
+    short cache for about 5 minutes so repeated requests are faster.)
+  </p>
+  <p>
+    The memory lives in your SOL account in Sydney. Along with your plans
+    and logs, SOL keeps a short list of things you've told it in chat so it
+    can coach you better, like "prefers evening sessions" or "walks the dog
+    in the mornings". It holds up to 30 short items. SOL picks them from your
+    messages, skips passing comments and anything already logged elsewhere
+    (such as pain, goals, training and food), and tidies the list once a
+    week, merging repeats and dropping things whose time has passed. The list
+    is sent to Claude with each plan, brief, report and chat reply.
+  </p>
+  <p>
+    You can see the list and delete any item, or all of it, in Settings,
+    What SOL remembers. Deleting your account deletes it too.
   </p>
 
   <h2 id="overseas">Sending your data overseas</h2>
