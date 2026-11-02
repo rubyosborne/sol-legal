@@ -100,7 +100,7 @@
   <a class="back" href="index.html">&larr; SOL legal</a>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 2026-10-31</p>
+  <p class="updated">Last updated: 2026-11-02</p>
 
   <div class="summary">
     <h2>The short version</h2>
@@ -110,6 +110,7 @@
       <li>You can skip any sensitive question. Cycle tracking is off unless you turn it on.</li>
       <li>Your data is stored in Amazon Web Services in <strong>Sydney, Australia</strong>.</li>
       <li>Two companies touch it, both as processors working for SOL: <strong>Anthropic</strong>, to generate your briefs, plans and replies, and <strong>AWS</strong>, to host it. Under Anthropic's commercial API terms, what SOL sends and receives is not used to train Anthropic's models.</li>
+      <li>The one other outside service is <strong>Open Food Facts</strong>, a food product database. If you scan a barcode SOL does not already know, SOL's server asks it about that barcode number only, never anything that identifies you.</li>
       <li><strong>Nobody else gets it.</strong> There are no analytics SDKs, no crash reporters, no advertising, no data brokers. Your data is not sold, ever.</li>
       <li>Your data is used to run SOL for you. That is the only reason it is processed.</li>
       <li>You can ask for a copy, a correction, or full deletion by emailing <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>.</li>
@@ -197,14 +198,25 @@
   <ul>
     <li>your chat messages with SOL, and SOL's replies;</li>
     <li>your training logs: sessions, loads, how they went;</li>
-    <li>your check-ins.</li>
+    <li>your check-ins;</li>
+    <li>the barcode numbers of products you scan, as part of your food log.</li>
   </ul>
+  <p>
+    Foods you save, such as a product typed from its label, are visible only
+    to you.
+  </p>
 
   <h3>What SOL does not collect</h3>
   <ul>
     <li>No advertising identifiers, device fingerprints or location tracking.</li>
     <li>No analytics about how you tap around the app.</li>
-    <li>No contacts, photos or camera access for data collection.</li>
+    <li>No contacts or photos.</li>
+    <li>
+      No camera images. SOL uses your camera only to scan a food barcode, and
+      only while the scanner is open. The camera image is read on your phone
+      and is never saved or sent anywhere. Only the barcode number goes to
+      SOL's server.
+    </li>
     <li>
       The microphone is used only if you choose voice logging, and only
       while you hold the button. Your voice is transcribed on your phone by
@@ -246,11 +258,18 @@
     sending data to Anthropic, which is based in the United States (see
     section 4).
   </p>
+  <p>
+    When you scan a barcode that is not in SOL's own food data, SOL's server
+    asks Open Food Facts, a free food product database run by a non-profit in
+    France, for that product number only, without anything that identifies
+    you (see section 4). Your phone never contacts Open Food Facts.
+  </p>
 
   <h2>4. Who else touches your data</h2>
   <p>
     Two providers, both acting as processors for SOL, under their own terms and
-    on our instructions. Nobody else.
+    on our instructions. The only other outside service is Open Food Facts,
+    for barcode lookups, described below. Nobody else.
   </p>
 
   <h3>Anthropic, as the AI processor</h3>
@@ -279,6 +298,16 @@
     AWS provides the servers, the database and the infrastructure SOL runs on,
     in Sydney. AWS stores and transmits your data on our behalf and does not
     use it for its own purposes.
+  </p>
+
+  <h3>Open Food Facts, for barcode lookups</h3>
+  <p>
+    When you scan a barcode that is not in SOL's own food data, SOL's server
+    asks Open Food Facts (openfoodfacts.org) for that product number. It sends
+    the number only: not your name, your account, or anything else that
+    identifies you, and the request comes from SOL's server, not your phone.
+    The product details that come back are kept on SOL's server and used for
+    anyone who scans the same product.
   </p>
 
   <h3>Who does not get your data</h3>
@@ -421,6 +450,11 @@
       exercise this, and we will action it.
     </p>
   </div>
+  <p>
+    Product details looked up from Open Food Facts are kept in a shared cache
+    on SOL's server with no account attached: 30 days if the product was
+    found, 7 days if it was not, and then deleted automatically.
+  </p>
   <p>
     You can also ask us to delete a specific part of your data, for example
     your cycle data or a particular conversation, without closing your
