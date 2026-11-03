@@ -106,459 +106,700 @@
     <h2>The short version</h2>
     <p class="note">This summary is here to be read. The full policy below is the complete picture.</p>
     <ul>
-      <li>Red Wellness collects what you tell it (onboarding answers, chat, training logs, check-ins) and the Apple Health data you explicitly grant.</li>
-      <li>You can skip any sensitive question. Cycle tracking is off unless you turn it on.</li>
-      <li>Your data is stored in Amazon Web Services in <strong>Sydney, Australia</strong>.</li>
-      <li>Two companies touch it, both as processors working for Red Wellness: <strong>Anthropic</strong>, to generate your briefs, plans and replies, and <strong>AWS</strong>, to host it. Under Anthropic's commercial API terms, what Red Wellness sends and receives is not used to train Anthropic's models.</li>
-      <li>The one other outside service is <strong>Open Food Facts</strong>, a food product database. If you scan a barcode Red Wellness does not already know, Red Wellness's server asks it about that barcode number only, never anything that identifies you.</li>
-      <li><strong>Nobody else gets it.</strong> There are no analytics SDKs, no crash reporters, no advertising, no data brokers. Your data is not sold, ever.</li>
-      <li>Your data is used to run Red Wellness for you. That is the only reason it is processed.</li>
-      <li>You can ask for a copy, a correction, or full deletion by emailing <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>.</li>
+      <li>Red Wellness is a training and wellness coach for iPhone, provided by Resonance Labs Limited, a New Zealand company run by one person, Ruby Osborne.</li>
+      <li>Red Wellness collects what you tell it, what you log, and the Apple Health data you allow it to read.</li>
+      <li>Your Red Wellness account data is stored with Amazon Web Services (AWS) in <strong>Sydney, Australia</strong>.</li>
+      <li>Emails you send us (to support@, hello@ or privacy@) are forwarded by Cloudflare and stored in Google's Gmail, which keeps mail in the United States and other countries.</li>
+      <li>To write your plans, briefs, monthly reports and chat replies, Red Wellness sends the information needed to <strong>Anthropic</strong>, a US company, whose Claude AI models do the writing. Anthropic stores it in the United States and may process it in other countries. This includes health information, such as anything you tell Red Wellness about injuries, conditions or medications, a rehab or physio programme you add, and the text of lab results you add. Anthropic <strong>does not train its models on that information</strong> and deletes it within 30 days, with limited exceptions explained in section 5.</li>
+      <li>Red keeps a short list of things you've told it so it can coach you better. You can see and delete it in Settings, What Red remembers.</li>
+      <li>If you add friends or train together, other Red Wellness users see what section 6 describes, and nothing more. In a training-together goal this includes members who are not your friends.</li>
+      <li>Nobody at Red Wellness looks at your data as a matter of course (section 5.5).</li>
+      <li><strong>No advertising, no analytics or tracking tools, no data brokers. Your data is never sold.</strong></li>
+      <li>You can delete your account and its data inside the app at any time (Settings, Delete account). You can download a copy of your data in the app at any time (Settings, Download my data), and ask for anything else, such as a correction, by emailing <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>.</li>
     </ul>
   </div>
 
+  <h2 id="who">1. Who we are</h2>
   <p>
-    Red Wellness is built and run by Ruby Osborne in Auckland, New Zealand ("we", "us",
-    "I"). This policy explains what personal information Red Wellness collects, why,
-    where it goes, and what you can do about it. It is written to match how
-    Red Wellness actually works, not to describe a generic app.
+    Red Wellness ("Red Wellness", "the app") is provided by
+    <strong>Resonance Labs Limited</strong> (NZBN 9429052608933), a New Zealand
+    company, of 39 Hankey Street, Mount Cook, Wellington 6011, New Zealand
+    ("we", "us"). The app's AI coach, which writes your plans, briefs and
+    replies, is called Red.
   </p>
   <p>
-    The <strong>New Zealand Privacy Act 2020</strong> and its information
-    privacy principles are the frame for this policy. Red Wellness handles health
-    information, which the Act treats seriously, and so do we.
+    We are responsible for your personal information under the
+    <strong>New Zealand Privacy Act 2020</strong>. Ruby Osborne is our
+    privacy officer. Red Wellness handles health information, which the Act
+    treats seriously, and so do we.
   </p>
   <p>
-    Any question about this policy, or about your own data, goes to
-    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>.
+    Contact for anything in this policy:
+    <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>,
+    or write to us at the address above.
+  </p>
+  <p>
+    This policy covers the Red Wellness iPhone app, its home-screen widget,
+    and the Red Wellness server that the app talks to. It is written to
+    describe how Red Wellness actually works, not to describe a generic app.
   </p>
 
-  <h2>1. What Red Wellness collects</h2>
+  <h2 id="collect">2. What we collect</h2>
   <p>
-    Everything below either comes from you directly or comes from Apple Health
-    with your explicit permission. Red Wellness does not buy data, scrape data, or
-    collect information about you from anywhere else.
+    We collect information from three places: from you directly, from Apple
+    Health with your permission, and from Apple when you sign in. We do not
+    buy information about you or collect it from anywhere else, except where
+    another Red Wellness user does something that involves you (section 2.6).
   </p>
 
-  <h3>Account information</h3>
+  <h3>2.1 Account information</h3>
   <ul>
-    <li>
-      The account identifier that <strong>Sign in with Apple</strong> gives
-      us, plus whatever name or email address Apple passes on at sign-in.
-      Apple lets you hide your real address behind its private relay, and if
-      you do, that relay address is all we see.
-    </li>
-    <li>
-      A session token for each device you sign in on. We store these
-      <strong>hashed</strong>, not in plain text, and signing out revokes the
-      session.
-    </li>
-    <li>
-      There is no Red Wellness password. We never see, hold or store one.
-    </li>
+    <li><strong>Sign in with Apple identifier.</strong> Apple gives us a stable identifier for your Apple ID. We store it so we can recognise you next time.</li>
+    <li><strong>Email address.</strong> Sign in with Apple may give us your email address, or a private relay address if you choose "Hide My Email". We use it only at the moment of sign-in and do not store it.</li>
+    <li><strong>Your display name.</strong> The name you give Red Wellness during setup. Friends and training partners see this name.</li>
+    <li><strong>Your friend code.</strong> A random code (for example SOL-ABC123) that you can share so others can add you.</li>
+    <li><strong>Session tokens.</strong> When you sign in on a device, we issue a token so the app stays signed in. We store only a one-way scrambled (<strong>hashed</strong>) version of it.</li>
+    <li><strong>Sign in with Apple token.</strong> When you sign in, Apple gives the app a one-time code. Our server can swap it with Apple for a token that lets us end Red Wellness's Sign in with Apple access when you delete your account (section 8). When we hold one, we store the newest one on its own, use it for nothing else, never write it to our logs, and delete it with your account.</li>
+    <li><strong>App check key.</strong> The app makes a key on your phone that Apple certifies as belonging to a genuine copy of Red Wellness (Apple App Attest). We store the public half of that key, a counter, and which Red Wellness account last used it, so our server can tell real app requests from imitations. It says nothing about you or your health.</li>
+    <li><strong>Your AI permission.</strong> A record of the permission you gave for AI processing: when, which wording you saw and which app version. We keep the history of any changes and delete it with your account.</li>
+    <li><strong>Time zone and app settings</strong>, such as which areas of Red Wellness you have switched on and how you like notifications.</li>
+    <li>There is no Red Wellness password. We never see, hold or store one.</li>
   </ul>
 
-  <h3>Onboarding questionnaire</h3>
-  <p>What you tell Red Wellness when you set it up:</p>
+  <h3>2.2 What you tell Red Wellness during setup</h3>
   <ul>
-    <li>your name (or whatever you would like to be called);</li>
-    <li>your goals;</li>
-    <li>your current training: what you do, how often, how hard;</li>
-    <li>how you have been feeling lately, in your own words;</li>
-    <li><span class="tag">optional</span> body facts, such as your birth year and height;</li>
-    <li><span class="tag">optional</span> menstrual-cycle preferences, including whether you want cycle-aware guidance at all.</li>
+    <li>your name or what you would like to be called;</li>
+    <li>why you came to Red Wellness, your goals, any target event and its date;</li>
+    <li>your current training, how often you move, the kinds of training you do, and the days, times, places and session lengths that suit you;</li>
+    <li>how your energy and sleep have been;</li>
+    <li>how you eat and whether you track food, and any food constraints such as allergies or a diet you follow;</li>
+    <li><span class="tag">optional</span> <strong>any current injuries you choose to tell Red Wellness about</strong>: which body areas, how the injury affects your training, and anything else you write about it;</li>
+    <li><span class="tag">optional</span> <strong>any rehab or physio programme you want built into your training</strong>, and when it ends or is next reviewed (for example a physio review date). You can type or paste it, pick a PDF or photo, or scan a paper sheet with your camera; the text is read on your phone, identifying details such as your name and contact details are removed, and only the text is uploaded. If you ask Red Wellness to suggest some work for an injury instead, Red Wellness records that you asked;</li>
+    <li><span class="tag">optional</span> <strong>any health conditions or medications you choose to mention</strong> (a free-text question);</li>
+    <li><span class="tag">optional</span> your birth year and height;</li>
+    <li><span class="tag">optional</span> your sex (female, male, or prefer not to say). Red Wellness uses it to calculate your training load from your heart rate. If you skip it, or choose prefer not to say, Red Wellness uses a value halfway between the female and male calculations;</li>
+    <li>which watch you wear, if any. Red Wellness keeps this on your phone only and uses it to read your watch's numbers correctly;</li>
+    <li><span class="tag">opt-in only</span> whether you want Red Wellness to track your menstrual cycle, and, if you do and Apple Health has no record, the date of your last period.</li>
   </ul>
   <p>
-    <strong>You can skip any sensitive question.</strong> Cycle questions
-    include a "rather not say" option, and cycle tracking is opt-in: if you do
-    not opt in, Red Wellness does not read or use cycle data. Skipping a question means
-    Red Wellness has less context, not that Red Wellness stops working.
+    Red Wellness stores your injury, rehab and condition answers, keeps a list
+    of your injuries and rehab with whether each is active or resolved (you
+    can change it in Goals and Training), and sends them to Anthropic word for
+    word so the AI can take them into account (section 5.1).
+  </p>
+  <p>
+    <strong>Every body and health question can be skipped.</strong> Skipping
+    means Red Wellness has less to go on, not that it stops working.
   </p>
 
-  <h3>Apple Health data</h3>
+  <h3>2.3 Apple Health data</h3>
   <p>
-    Only the categories you explicitly grant in the iOS permission sheet. The
-    categories Red Wellness asks for are:
+    Red Wellness asks Apple Health for permission to read the kinds of data
+    below. iOS shows you each one and you choose which to allow. Red Wellness
+    only asks for a kind of data if the area of Red Wellness that uses it is
+    switched on, and you can switch areas off in Settings. If you deny a kind
+    of data, Red Wellness does not receive it.
   </p>
+  <p>In plain terms, Red Wellness can read:</p>
   <ul>
-    <li>sleep</li>
-    <li>steps</li>
-    <li>heart rate</li>
-    <li>heart rate variability (HRV)</li>
-    <li>weight</li>
-    <li>workouts</li>
-    <li><span class="tag">opt-in only</span> cycle data, read only if you have turned cycle tracking on</li>
+    <li><strong>Workouts:</strong> what kind of workout, how long, how far, the energy you burned and your average and highest heart rate during it.</li>
+    <li><strong>Sleep:</strong> how long you slept each night, and how much of it was deep and REM sleep.</li>
+    <li><strong>Heart, breathing and recovery:</strong> heart rate variability, resting heart rate, walking heart rate, breathing rate, blood oxygen, wrist temperature while you sleep, and VO2 max (an estimate of your fitness).</li>
+    <li><strong>Body measurements:</strong> weight, body fat percentage and lean body mass.</li>
+    <li><strong>Daily activity:</strong> steps, active energy and exercise minutes.</li>
+    <li><strong>Nutrition logged in Apple Health:</strong> energy, protein, carbohydrate, fat, fibre and sugar, some vitamins and minerals, and caffeine.</li>
+    <li><span class="tag">opt-in only</span> <strong>Menstrual cycle, only if you turn on cycle tracking:</strong> period flow and spotting.</li>
   </ul>
   <p>
-    If you deny a category, Red Wellness does not receive it. See section 5 for how
-    Apple Health data is handled and how to revoke access.
+    <a href="#appendix-a">Appendix A</a> lists every individual Apple Health
+    data type Red Wellness can read, and which area of Red Wellness uses it.
+  </p>
+  <p>
+    Red Wellness reads daily totals or averages, plus one record per workout,
+    not every individual reading. When you first connect, Red Wellness reads
+    up to one year of history (the last 365 days) so it can learn your
+    baselines; after that it reads recent days.
+  </p>
+  <p>
+    <strong>Background sync.</strong> Red Wellness may sync new Health data
+    to Red Wellness's server in the background, for example after a workout
+    is saved, without the app being open. It goes only to Red Wellness's
+    server.
+  </p>
+  <p>
+    <strong>What Red Wellness writes to Apple Health.</strong> Red Wellness
+    also asks for permission to write period entries. If you log a period or
+    spotting in Red Wellness, Red Wellness writes that entry (flow level and
+    cycle start, or spotting) into Apple Health, where it becomes part of your
+    Apple Health record. Red Wellness writes nothing else to Apple Health.
+  </p>
+  <p>
+    Cycle tracking is off unless you turn it on. If you say no to cycle
+    tracking or to food tracking during setup, Red Wellness does not ask for
+    those Apple Health permissions. Apple Health data is used only to provide
+    Red Wellness's health and fitness features, and never for advertising or
+    marketing (section 3).
   </p>
 
-  <h3>What you create while using Red Wellness</h3>
+  <h3>2.4 What you create while using Red Wellness</h3>
   <ul>
-    <li>your chat messages with Red, the app's AI coach, and Red's replies;</li>
-    <li>your training logs: sessions, loads, how they went;</li>
-    <li>your check-ins;</li>
-    <li>the barcode numbers of products you scan, as part of your food log.</li>
+    <li><strong>Chat.</strong> Your messages to Red and Red's replies, including the recent conversation and a summary of your current numbers that the app attaches so Red can answer in context.</li>
+    <li><strong>Food logs.</strong> What you type or say about a meal, the barcode numbers of products you scan, and the foods, amounts and nutrients you confirm.</li>
+    <li><strong>Foods and recipes you save</strong>, such as a product typed or photographed from its label, a meal you saved (including a meal saved as a recipe), or a recipe: the names and nutrition you enter, a recipe's ingredients, servings and cooked weight, a barcode number if you add one, and which foods you mark as favourites. They are only visible to you, they are kept until you delete them or your account, and they are included in Download my data.</li>
+    <li><strong>Training logs and check-ins</strong>, such as sessions, loads, lifts, how a session went, a pain score and where it hurts, and whether you took your supplements today (a simple yes; Red Wellness does not record which supplements or doses).</li>
+    <li><strong>Notes and goal requests</strong> you send to Red Wellness in your own words.</li>
+    <li><strong>Training plans</strong> you paste or upload, and what you tell Red Wellness when it interviews you about a plan (including baseline paces and longest run).</li>
+    <li><strong>Injuries and rehab</strong> you add or change after setup (in Goals and Training), including a rehab or physio programme and its end point, and your answers when Red Wellness asks whether to keep or drop a rehab item. A programme read from a PDF, photo or camera scan is handled as in section 2.2: read on your phone, identifying details removed, only the text uploaded. A programme can name your physio or clinic; please remove anything you would rather not share before you save it.</li>
+    <li><strong>Documents you add</strong>, such as lab results (for example blood tests) or body-composition scan reports. You pick a PDF or a photo, and the app reads the text from it on your phone. Before anything leaves your phone, Red Wellness removes identifying details from the text it read, such as your name, date of birth, NHI number, address, phone numbers, email addresses and the requesting doctor or clinic. It then uploads to our server the values you confirmed and <strong>the rest of the text</strong>, which contains the test names, results, units, reference ranges and test dates. Removal is automatic and may occasionally miss a detail printed in an unusual layout. The PDF or photo itself is not uploaded. For your monthly report, Red Wellness sends this text from your two most recent documents of each kind to Anthropic (section 5.1).</li>
+    <li><strong>Weight and period entries</strong> you type into Red Wellness.</li>
+  </ul>
+
+  <h3>2.5 What Red Wellness produces about you</h3>
+  <p>
+    Red Wellness produces information from the above: readiness, effort and
+    fuel scores (calculated on your phone; section 6.1 says when a readiness
+    or fuel score leaves it), daily briefs, weekly and longer-term training
+    plans, monthly reports, progress toward your goals, and a record of the
+    coaching decisions Red Wellness has made for you. We treat all of this as
+    your personal information too.
+  </p>
+  <p>
+    <strong>What Red remembers.</strong> Red Wellness keeps a short list of
+    things you've told it so it can coach you better, such as when you like to
+    train or that you walk the dog in the mornings. It holds up to 30 short
+    items, each with the date it was saved. Red picks them from your chat
+    messages and tidies the list once a week. Red is instructed not to save
+    passing comments or anything the app records elsewhere, including pain,
+    injury, illness, medical conditions, medication, goals, training and food.
+    That is an instruction to the AI, not a guarantee, so you can see every
+    item it saves: when Red saves one, a line under its reply says "Red will
+    remember: ...", and tapping it opens What Red remembers. The list is sent
+    to Anthropic with each plan, brief, monthly report and chat reply (section
+    5.1). You can see and delete any item, or the whole list, in Settings,
+    What Red remembers.
+  </p>
+
+  <h3>2.6 Information about you from other Red Wellness users</h3>
+  <p>
+    If another Red Wellness user adds you as a friend, invites you to train
+    together, mutes, blocks or reports you, we hold a record of that. A report
+    includes the reason the other person typed. Red Wellness does not tell you
+    when someone mutes, blocks or reports you, to protect the other person. We
+    tell you about this collection here, and the app shows you friend requests
+    and training-together requests when they arrive.
+  </p>
+
+  <h3>2.7 Voice</h3>
+  <p>
+    If you use voice input, Red Wellness uses your microphone only from when
+    you tap the microphone button until you tap it again. Your speech is
+    turned into text <strong>on your phone</strong> by a speech recognition
+    model that is built into the app. The audio is held in your phone's memory
+    only while it is being turned into text. It is never saved and never
+    leaves your phone. Only the text, after you have seen it and chosen to
+    send it (for example "two eggs and porridge"), is sent to Red Wellness,
+    the same as if you had typed it.
+  </p>
+
+  <h3>2.8 What Red Wellness does not collect</h3>
+  <ul>
+    <li>No location, contacts, or photo library access. (When you add a document, you pick the single file yourself.)</li>
+    <li>No camera images. Red Wellness uses your camera only to scan a food barcode, to photograph a food's nutrition label, or to scan a paper rehab or physio programme, and only while you are doing it. The image is read on your phone and is never saved or sent anywhere. Only the barcode number, the nutrition values you check and save, or the programme text you check and save (with identifying details removed) go to Red Wellness's server.</li>
+    <li>No advertising identifier, device fingerprinting or cross-app tracking.</li>
+    <li>No analytics, crash-reporting or advertising tools from other companies.</li>
+    <li>No payment details. Red Wellness is free. If we add paid features, purchases will go through Apple, and Apple does not give us your card details.</li>
+  </ul>
+
+  <h2 id="why">3. Why we use it</h2>
+  <p>
+    We use your information to provide Red Wellness to you, and for nothing
+    unrelated. Specifically:
+  </p>
+  <ol>
+    <li>to build and adjust your training plan, daily brief and monthly report;</li>
+    <li>to answer you in chat with your own history in mind;</li>
+    <li>to estimate your food intake from what you log;</li>
+    <li>to calculate and show your scores, trends and progress;</li>
+    <li>to show the friends and training partners you have chosen what you have chosen to share with them (section 6);</li>
+    <li>to send you notifications on your phone;</li>
+    <li>to keep Red Wellness secure, prevent abuse (for example daily usage limits), and investigate reports between users;</li>
+    <li>to find and fix problems in Red Wellness;</li>
+    <li>to meet our legal obligations.</li>
+  </ol>
+  <p>
+    We do <strong>not</strong> use your information, and in particular your
+    Apple Health data, for advertising, marketing, selling, data mining or
+    profiling for anyone else. We do not use it to train AI models, and we do
+    not let our providers do so.
+  </p>
+  <div class="callout">
+    <p>
+      <strong>Automated output.</strong> Red Wellness's plans, briefs and
+      replies are produced automatically by AI from your data. They are
+      suggestions for your training and wellbeing, and they can be wrong; the
+      app says so when you sign up, in Settings, and at the end of each day's
+      morning brief, which always closes with "Red, your AI wellness coach".
+      Red Wellness does not make decisions that have legal effects on you or
+      that decide access to any service, credit, insurance or employment.
+    </p>
+  </div>
+
+  <h2 id="where">4. Where your information is stored and processed</h2>
+  <ul>
+    <li><strong>Your Red Wellness account and everything in section 2 that reaches our server:</strong> Amazon Web Services, as our host, in Sydney, Australia (AWS region ap-southeast-2, Asia Pacific (Sydney)).</li>
+    <li><strong>The parts needed to generate a plan, brief, monthly report, chat reply or food estimate:</strong> Anthropic, as our AI provider. Stored by Anthropic in the United States. Anthropic may also process a request in other countries where it runs its AI models.</li>
+    <li><strong>Server logs</strong> (technical records: mostly identifiers and counts, and some error messages. When one user reports another, the log holds only the two user IDs and the report's reference, not the reason): Amazon Web Services, in Sydney, Australia.</li>
+    <li><strong>Anything you write when you choose to email support@, hello@ or privacy@resonancelabs.co.nz:</strong> forwarded by Cloudflare, Inc., as our email forwarder, then stored in our Gmail mailbox with Google LLC, as our email provider. Google stores mail in the United States and other countries where it runs its services. Cloudflare does not store the email.</li>
+    <li><strong>Health data, scores and recent chat cached on your phone:</strong> your iPhone, with you.</li>
   </ul>
   <p>
-    Foods and recipes you save, such as a product typed or photographed from
-    its label, a meal you saved as a recipe, or a recipe with its
-    ingredients, and which of them you mark as favourites, are visible only
-    to you.
+    When you scan a barcode that is not in Red Wellness's own food data,
+    Red Wellness's server asks Open Food Facts, a free food product database
+    run by a non-profit in France, for that product number only, without
+    anything that identifies you (section 5.4). Your phone never contacts Open
+    Food Facts.
+  </p>
+  <p>
+    Your phone also keeps copies so Red Wellness works quickly and offline:
+    recent health numbers, your plan, chat threads from the last 7 days, your
+    last 14 days of meals, and a small summary for the home-screen widget.
+    Apple Health data stays in Apple Health; Red Wellness keeps its own daily
+    summaries. Red Wellness does not store personal health information in
+    iCloud.
   </p>
 
-  <h3>What Red Wellness does not collect</h3>
+  <h2 id="sharing">5. Who we share it with</h2>
+
+  <h3>5.1 Our service providers</h3>
+  <p>
+    Amazon Web Services and Anthropic (below) handle your information on our
+    behalf, under contracts that limit them to providing their service to us.
+    Google and Cloudflare handle only emails you choose to send us, under
+    their own terms. Apple is covered below.
+  </p>
+  <p>
+    <strong>Anthropic PBC (United States), AI provider.</strong> Red
+    Wellness's plans, briefs, monthly reports, chat replies and food estimates
+    are written by Anthropic's Claude models. Anthropic stores what Red
+    Wellness sends in the United States and may process it in other countries
+    where it runs its models. For each request Red Wellness sends what that
+    task needs, which can include:
+  </p>
   <ul>
-    <li>No advertising identifiers, device fingerprints or location tracking.</li>
-    <li>No analytics about how you tap around the app.</li>
-    <li>No contacts or photos.</li>
-    <li>
-      No camera images. Red Wellness uses your camera only to scan a food barcode or
-      to photograph a food's nutrition label, and only while you are doing
-      it. The image is read on your phone and is never saved or sent
-      anywhere. Only the barcode number, or the nutrition values you check
-      and save, go to Red Wellness's server.
-    </li>
-    <li>
-      The microphone is used only if you choose voice logging, and only
-      while you hold the button. Your voice is transcribed on your phone by
-      an on-device model: the audio is never stored and never leaves the
-      device. Only the text you confirm (for example "two eggs and
-      porridge") is sent to Red Wellness, the same as if you had typed it.
-    </li>
-    <li>No payment details. Red Wellness is currently free, and any future purchase would go through Apple, which does not pass us your card details.</li>
+    <li>your display name and setup answers, including your birth year, height and sex (if you gave it), and <strong>your answers about injuries, conditions or medications, word for word</strong>;</li>
+    <li>your list of injuries and rehab, including any rehab or physio programme you added, word for word, with its end point and whether it is active or resolved;</li>
+    <li>your goals, plan, training history and logs, training plans you uploaded, and your answers when Red Wellness interviewed you about a plan;</li>
+    <li>recent Apple Health numbers (daily values for up to the last 28 days), including sleep, heart rate, heart rate variability, weight, workouts, nutrition and, if you track your cycle, period entries and cycle phase, plus the scores, baselines and trends Red Wellness calculates from your longer history;</li>
+    <li>your notes, goal requests, check-ins and pain entries;</li>
+    <li>your chat messages, with the summary of your current numbers the app attaches;</li>
+    <li>the short list of things Red remembers about you (section 2.5);</li>
+    <li>Red's own earlier plans, briefs, reports and record of coaching decisions, so it can stay consistent;</li>
+    <li>for the monthly report, the values and <strong>the text read from your two most recent documents of each kind, with identifying details removed (section 2.4)</strong>, such as lab results and body-composition scans;</li>
+    <li>for food logging, only the text of what you ate, and for a recipe's ingredient list you say or type, only that list;</li>
+    <li>if you train together, the goal's name, its owner's display name and, if you follow the owner's weekly pattern, the kinds of sessions on the owner's days.</li>
   </ul>
-
-  <h2>2. Why Red Wellness processes it</h2>
-  <p>
-    One reason: <strong>to run the service you signed up for.</strong>
-    Specifically, to:
-  </p>
-  <ul>
-    <li>generate your daily brief;</li>
-    <li>generate and adjust your weekly training plan;</li>
-    <li>answer you in chat with your own context in mind;</li>
-    <li>show your own history back to you;</li>
-    <li>keep your account secure and working, and diagnose problems in Red Wellness itself.</li>
-  </ul>
-  <p>
-    That is the whole list. Your data is not used for advertising, for
-    profiling you for anyone else's benefit, for market research, or for
-    training AI models.
-  </p>
-
-  <h2>3. Where it is stored</h2>
-  <p>
-    Red Wellness's backend runs on <strong>Amazon Web Services</strong> in the
-    <strong>Asia Pacific (Sydney) region, ap-southeast-2</strong>. Your data
-    is stored in <strong>Amazon DynamoDB</strong> in that region.
-  </p>
-  <p>
-    Sydney is in Australia, so your information is held outside New Zealand.
-    AWS is contractually bound to protect it and processes it only on our
-    instructions. Generating your briefs, plans and replies also involves
-    sending data to Anthropic, which is based in the United States (see
-    section 4).
-  </p>
-  <p>
-    When you scan a barcode that is not in Red Wellness's own food data, Red Wellness's server
-    asks Open Food Facts, a free food product database run by a non-profit in
-    France, for that product number only, without anything that identifies
-    you (see section 4). Your phone never contacts Open Food Facts.
-  </p>
-
-  <h2>4. Who else touches your data</h2>
-  <p>
-    Two providers, both acting as processors for Red Wellness, under their own terms and
-    on our instructions. The only other outside service is Open Food Facts,
-    for barcode lookups, described below. Nobody else.
-  </p>
-
-  <h3>Anthropic, as the AI processor</h3>
-  <p>
-    Red Wellness's briefs, weekly plans and chat replies are generated by
-    <strong>Anthropic's Claude models</strong>, accessed through the Anthropic
-    API. To do that, the data a given feature needs is sent to Anthropic for
-    generation. That can include your onboarding answers, relevant health and
-    training metrics, your logs and check-ins, and your chat messages.
-  </p>
-  <p>Two things matter here:</p>
-  <ul>
-    <li>
+  <div class="callout">
+    <p>
       <strong>Anthropic does not train on it.</strong> Under Anthropic's
-      commercial API terms, inputs sent to the API and outputs returned are
-      not used to train Anthropic's models.
-    </li>
-    <li>
-      <strong>Only what is needed is sent.</strong> Data goes to Anthropic to
-      produce something for you, and for no other purpose.
-    </li>
-  </ul>
-
-  <h3>Amazon Web Services, as the host</h3>
+      Commercial Terms of Service, Anthropic may not train its models on this
+      content. Anthropic acts as our processor under its Data Processing
+      Addendum. Anthropic's published practice is to delete API inputs and
+      outputs within 30 days. If its automated safety systems flag a request as
+      possibly breaching its usage policy, Anthropic may keep that request for
+      up to 2 years and related safety scores for up to 7 years. Red Wellness
+      also uses a short-lived cache at Anthropic (about 5 minutes) so repeated
+      requests are faster.
+    </p>
+  </div>
   <p>
-    AWS provides the servers, the database and the infrastructure Red Wellness runs on,
-    in Sydney. AWS stores and transmits your data on our behalf and does not
-    use it for its own purposes.
+    <strong>Amazon Web Services (AWS), host.</strong> AWS runs Red Wellness's
+    server and database in Sydney. Under its Data Processing Addendum, AWS
+    acts as our processor, does not use your data for its own purposes, and
+    does not move it out of the Sydney region without our agreement except
+    where the law requires.
+  </p>
+  <p>
+    <strong>Google LLC (United States), email storage.</strong> Emails sent to
+    support@, hello@ and privacy@resonancelabs.co.nz are stored in Google's
+    Gmail. This is whatever you write if you choose to contact us. Google
+    stores mail in the United States and other countries where it runs its
+    services. We use a standard Gmail account, and Google's own terms and
+    privacy policy apply to it.
+  </p>
+  <p>
+    <strong>Cloudflare, Inc. (United States), email forwarding.</strong>
+    Cloudflare Email Routing receives mail sent to our resonancelabs.co.nz
+    addresses and forwards it to Gmail. It passes the email on and does not
+    store it.
+  </p>
+  <p>
+    <strong>Apple.</strong> Apple provides Sign in with Apple, Apple Health and
+    the App Store. We check your sign-in with Apple's servers. Apple's own use
+    of your information is covered by Apple's privacy policy, not this one.
   </p>
 
-  <h3>Open Food Facts, for barcode lookups</h3>
+  <h3>5.2 Your consent to sending data overseas</h3>
   <p>
-    When you scan a barcode that is not in Red Wellness's own food data, Red Wellness's server
-    asks Open Food Facts (openfoodfacts.org) for that product number. It sends
-    the number only: not your name, your account, or anything else that
-    identifies you, and the request comes from Red Wellness's server, not your phone.
-    The product details that come back are kept on Red Wellness's server and used for
-    anyone who scans the same product.
+    Your information goes to Australia (AWS), to Anthropic, which stores it in
+    the United States and may process it in other countries where it runs its
+    models, and, if you email us, to Google (stored in the United States and
+    other countries) with Cloudflare (United States) forwarding the email. All
+    of these providers process it for us, and we remain responsible for it.
+    Australia has privacy law broadly comparable to New Zealand's. The United
+    States does not have a single comparable federal privacy law, and we
+    cannot tell you in advance which other countries a particular request may
+    be processed in, so the protection your information gets with Anthropic,
+    Google and Cloudflare comes mainly from our contracts and their terms
+    rather than from the law of those countries.
   </p>
+  <div class="callout">
+    <p>
+      <strong>Before Red Wellness sends any of your information to Anthropic,
+      the app asks for your permission on a separate screen.</strong> That
+      screen itself says "US privacy law may not protect your data the way New
+      Zealand's does." It also links to a page that explains more
+      (<a href="ai.html">How Red uses AI</a>). By giving that permission you
+      authorise Red Wellness to send your information to Anthropic, for
+      storage in the United States and processing there or in other countries,
+      understanding that Anthropic may not be required by law to protect it in
+      a way that, overall, gives safeguards comparable to New Zealand's.
+      Without this permission Red Wellness cannot write your plans or replies,
+      and you cannot use Red Wellness.
+    </p>
+  </div>
 
-  <h3>Who does not get your data</h3>
+  <h3>5.3 Other people you choose</h3>
+  <p>Friends and training partners, as described in section 6.</p>
+
+  <h3>5.4 Nobody else, except where the law requires</h3>
   <div class="callout">
     <p>
       <strong>No analytics, no ads, no brokers, no sale.</strong> Red Wellness
-      deliberately contains <strong>no third-party analytics SDKs, no crash
-      or error reporting services, no advertising SDKs and no tracking
-      libraries</strong>. We do not work with data brokers. We do not sell,
-      rent or trade your personal information, and there is no advertising in
-      Red Wellness.
-    </p>
-    <p>
-      <strong>Your health-related text is not shared with any third party</strong>
-      other than the AI processor and the host named above. That includes your
-      chat messages, your check-ins and anything you have written about how
-      you feel.
+      contains no third-party analytics, crash or error reporting, advertising
+      or tracking tools. We do not sell, rent or trade your information. We do
+      not share it with advertisers, data brokers, insurers or employers.
     </p>
   </div>
   <p>
-    The one exception we have to name: if we were legally required to disclose
-    information, for example under a valid court order, we would comply, and
-    we would tell you unless we were legally prohibited from doing so.
+    <strong>Barcode lookups.</strong> When you scan a barcode that is not in
+    Red Wellness's own food data, Red Wellness's server asks Open Food Facts
+    (openfoodfacts.org) for that product number. It sends the number only:
+    not your name, your account, or anything else that identifies you, and the
+    request comes from Red Wellness's server, not your phone. The product
+    details that come back are kept on Red Wellness's server and used for
+    anyone who scans the same product.
   </p>
   <p>
-    If Red Wellness were ever transferred to someone else, we would tell you before
-    your data moved, and you would have the chance to delete it first.
-  </p>
-
-  <h2>4a. Sharing with friends, if you choose it</h2>
-  <p>
-    Red Wellness may offer a friends feature. If you connect with a friend, you
-    decide exactly what that friend can see, and the choices are per friend
-    and per category: your training week, your readiness, your fuel. Each
-    one is a separate switch. Everything starts switched off: becoming
-    friends shares nothing by itself. You can switch any of them off again
-    at any time and the change applies immediately, and removing or
-    blocking a friend ends all visibility both ways. A friend can never see
-    your chat, your notes, your measurements, or anything beyond the
-    categories you switched on.
+    We may disclose information if the law requires it, for example a valid
+    court order. Our providers may also be required to disclose it under the
+    law of the countries they operate in (section 5.2). We may also disclose it
+    where we believe it is necessary to prevent a serious threat to someone's
+    life or health. Where we are allowed to, we will tell you.
   </p>
   <p>
-    What each switch shows: your training week is the title of each day's
-    session, such as "Run ~8 km" or "Rest", and the name of your training
-    goal; your readiness and your fuel are each a score from 0 to 100 and
-    the day it is from. A friend never sees Red Wellness's written summaries or the
-    notes in your plan. Your readiness and fuel scores are worked out on
-    your phone. Each one leaves your phone only while you share it with at
-    least one friend, and only so those friends can see it. We keep the
-    latest score, and delete it when no friend can see it any more.
+    If Red Wellness or its business is ever transferred to someone else, we
+    will tell you before your information moves, and you will be able to
+    delete your account first.
   </p>
 
-  <h2>4b. Training together, if you choose it</h2>
+  <h3>5.5 Our own access</h3>
   <p>
-    You can ask to train with a friend towards their training goal. If they
-    accept, everyone training for that goal can see your progress towards
-    it, and nobody else can. That is a separate choice from the switches
-    above: asking to join gives it, and so does accepting someone's
-    request.
-  </p>
-  <p>
-    What the others in the goal see: your name; how you are doing against
-    your own plan this week and towards your own target, as percentages;
-    and a notification when you complete a significant session, such as
-    your hardest session of the week, a personal best on the goal, a race
-    or test day, or a milestone towards your target. For a run that
-    notification can include the distance and pace, for example "completed
-    a 10 km run at 5:30 pace". People in the same goal can see this even if
-    they are not your friends. If you choose to follow the owner's weekly
-    pattern, Red Wellness uses only the kinds of sessions on each day of their week,
-    never their numbers.
-  </p>
-  <p>
-    Your plan is always built from your own data, and nobody's numbers are
-    copied into anyone else's account. You can leave at any time, the
-    goal's owner can end it, and removing or blocking someone takes them
-    out of any goal you share, both ways. You can also mute any one
-    person's notifications without leaving.
-  </p>
-
-  <h2>5. Apple Health data, specifically</h2>
-  <p>
-    Health data from Apple Health gets its own rules, both under Apple's
-    HealthKit requirements and under this policy:
+    Red Wellness is run by one person, Ruby Osborne. No one at Red Wellness
+    looks at your information as a matter of course.
   </p>
   <ul>
-    <li>
-      <strong>Only what you grant.</strong> Red Wellness reads only the categories you
-      allow in the iOS permission sheet, and nothing else in Apple Health.
-    </li>
-    <li>
-      <strong>You can revoke it at any time</strong>, in
-      <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Health &rsaquo; Red Wellness</em>
-      on your iPhone, per category. Red Wellness stops receiving that data straight
-      away. Revoking does not delete what Red Wellness already holds, so email us if
-      you want that removed too.
-    </li>
-    <li>
-      <strong>Background sync.</strong> Red Wellness may sync new Health data to Red Wellness's
-      server in the background, for example after a workout is saved, without
-      the app being open. It goes only to Red Wellness's server.
-    </li>
-    <li>
-      <strong>Never used for advertising or marketing.</strong> Apple Health
-      data is never used for advertising, marketing, re-targeting or any
-      similar purpose, and is never sold or shared with data brokers.
-    </li>
-    <li>
-      <strong>Used only to provide Red Wellness's health and fitness features</strong>,
-      which is what you granted it for.
-    </li>
-    <li>
-      <strong>Cycle data is opt-in.</strong> If you have not opted in, Red Wellness
-      does not request or use it.
-    </li>
+    <li><strong>Database access.</strong> As Red Wellness's only operator, Ruby has technical access to the server and database. She uses it only to keep Red Wellness running, to fix a problem, to keep Red Wellness secure, to act on a request you make under section 9, or where the law requires.</li>
+    <li><strong>Reports.</strong> If another user reports you with the report button, Ruby reads the text of that report so she can decide what to do (section 6.3).</li>
   </ul>
 
-  <h2>6. How it is protected</h2>
+  <h2 id="friends">6. Friends and training together</h2>
+  <p>
+    These features are optional. Nothing is shared with anyone until you take
+    an action described here.
+  </p>
+
+  <h3>6.1 Friends</h3>
+  <p>
+    You add a friend by exchanging friend codes; there is no public search.
+    Once you are friends, each of you sees the other's display name. For each
+    friend separately you choose what they can see, using three switches that
+    all start off:
+  </p>
   <ul>
-    <li>Sign in with Apple only, so there is no Red Wellness password to be guessed, reused or breached.</li>
-    <li>Session tokens are stored hashed, and signing out revokes them.</li>
-    <li>Data moves between the app, the backend and our processors over encrypted connections (HTTPS/TLS).</li>
-    <li>Data at rest in DynamoDB is encrypted by AWS.</li>
-    <li>Access to the backend is limited to the owner, and your data is only ever processed to run your own account.</li>
+    <li><strong>My training:</strong> the title of each day's session in your current week, such as "Run ~8 km" or "Rest", and the name of your training goal.</li>
+    <li><strong>My readiness:</strong> your readiness score, a number from 0 to 100, and the day it is from.</li>
+    <li><strong>My fuel:</strong> your fuel score, a number from 0 to 100, and the day it is from.</li>
   </ul>
   <p>
-    Being straight with you: Red Wellness is a small product run by one person. We take
-    this seriously and have deliberately kept the number of parties who touch
-    your data as small as possible, which is itself a security decision. But
-    no system is perfectly secure, and we cannot guarantee that nothing will
-    ever go wrong. Section 8 says what we will do if it does.
+    A friend never sees Red Wellness's written summaries, the notes in your
+    plan, the health numbers behind your scores, your chat, notes, check-ins,
+    documents or setup answers, or anything outside the switches you turn on.
+    Your readiness and fuel scores are worked out on your phone. Each one
+    leaves your phone only while you share it with at least one friend, and
+    only so those friends can see it. We keep the latest score, and delete it
+    when no friend can see it any more. You can change a switch at any time
+    and it takes effect straight away. Removing or blocking a friend ends all
+    sharing both ways.
   </p>
 
-  <h2>7. How long it is kept, and deletion</h2>
+  <h3>6.2 Training together</h3>
   <p>
-    Your information is kept <strong>while your account is active</strong>,
-    because Red Wellness's whole value is continuity: your plan next week depends on
-    your weeks before it.
+    You can ask to train toward a friend's training goal (only if that friend
+    shares their training with you), and they can accept. Joining replaces
+    your own training goal with the shared one. Asking to join, or accepting
+    someone's request, is your permission for the sharing below.
   </p>
   <p>
-    <strong>We will delete your account and your data on request.</strong>
-    Email <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>
-    from the address linked to your account, or tell us enough to identify it,
-    and ask for deletion. We will confirm, delete your account and the
-    personal information held against it, and confirm again when it is done.
-    We aim to do this within 30 days of verifying the request. If a copy
-    remains in a routine system backup, it is removed as those backups cycle,
-    and it is not used for anything in the meantime.
+    <strong>Everyone in the goal, including people who are not your
+    friends,</strong> can see:
   </p>
-  <div class="callout">
-    <p>
-      <strong>Please note:</strong> deletion is currently handled by email
-      request rather than a button inside the app. An in-app account deletion
-      flow is being built. Until it ships, the email route above is how you
-      exercise this, and we will action it.
-    </p>
-  </div>
+  <ul>
+    <li>your display name;</li>
+    <li>your progress row: how you are doing against your own plan this week, and how far you are toward your own target, both as percentages;</li>
+    <li>notifications about your significant sessions, sent to every member whatever your friend sharing switches say:
+      <ul>
+        <li>your hardest session of the week (for a run, this can include distance and pace, for example "a 10 km run at 5:30 pace");</li>
+        <li>a personal best, which can include a lift's weight and reps, a run's distance and pace, or a VO2 max value;</li>
+        <li>a race or test day;</li>
+        <li>reaching 25, 50, 75 or 100 percent of the target, with the goal's name.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>You see the same about the other members.</p>
   <p>
-    Product details looked up from Open Food Facts are kept in a shared cache
-    on Red Wellness's server with no account attached: 30 days if the product was
-    found, 7 days if it was not, and then deleted automatically.
-  </p>
-  <p>
-    You can also ask us to delete a specific part of your data, for example
-    your cycle data or a particular conversation, without closing your
-    account.
+    If you choose to follow the goal owner's weekly pattern, Red Wellness uses
+    only the kinds of sessions on each of the owner's days, never their
+    numbers.
   </p>
   <p>
-    If you ask us to delete information we are legally required to keep, we
-    will tell you what and why, and delete the rest.
+    Everyone's plan is built from their own data, and nobody's numbers are
+    copied into anyone else's account. You can leave at any time, the owner
+    can end the goal, and blocking or removing someone takes them out of any
+    goal you share. You can mute one person's notifications without leaving.
   </p>
 
-  <h2>8. If something goes wrong</h2>
+  <h3>6.3 Blocking and reporting</h3>
   <p>
-    If there is a privacy breach that has caused, or is likely to cause,
-    serious harm to you, the Privacy Act 2020 requires us to notify the
-    <strong>Office of the Privacy Commissioner</strong> and the people
-    affected as soon as practicable. We commit to that, and specifically:
+    You can block anyone. You can report a user with the report button and add
+    a reason. Each report is saved in Red Wellness's database and we are
+    alerted that one was filed. Ruby reads it in the database. We aim to
+    review reports within 24 hours, and always within 2 working days, and she
+    decides what to do, which can include closing the reported account. The
+    person you report is not told who reported them.
+  </p>
+
+  <h2 id="retention">7. How long we keep it</h2>
+  <p>
+    We keep your information while you have a Red Wellness account, because
+    Red Wellness's coaching depends on your history: your plan next week is
+    built from the weeks before it. Older health records are moved to archives
+    but are still kept, so Red Wellness can compare seasons and years.
+  </p>
+  <ul>
+    <li><strong>Account, setup answers, health history, logs, plans, reports, documents, injuries and rehab:</strong> until you delete your account or ask us to delete it.</li>
+    <li><strong>What Red remembers:</strong> until you delete an item or the whole list in Settings, What Red remembers, or Red Wellness's weekly tidy removes it (merged with a similar item, or its time has passed). Removed when you delete your account.</li>
+    <li><strong>Chat history:</strong> 7 days, on our servers and on your phone. Our database deletes expired messages automatically, which can take a few more days.</li>
+    <li><strong>Session tokens:</strong> until you sign out on that device or delete your account.</li>
+    <li><strong>Sign in with Apple token:</strong> until you delete your account. Each sign-in replaces it with a new one.</li>
+    <li><strong>App check key:</strong> until you delete your account, or 180 days after the app last used it.</li>
+    <li><strong>Server logs:</strong> 7 days.</li>
+    <li><strong>Reports you file about another user:</strong> kept until you delete your account, and deleted with it. Also kept after the reported account is deleted, when the report no longer leads to that person's name, Apple ID or data.</li>
+    <li><strong>Product details from Open Food Facts:</strong> kept in a shared cache on Red Wellness's server with no account attached: 30 days if the product was found, 7 days if it was not, and then deleted automatically.</li>
+    <li><strong>Backups:</strong> we do not keep database backups. If we add them, we will update this policy and say how long they are kept.</li>
+    <li><strong>At Anthropic:</strong> up to 30 days, or longer for flagged content (section 5.1).</li>
+    <li><strong>Copies on your phone:</strong> until you delete the app or the account (section 8).</li>
+  </ul>
+  <p>
+    You can ask us to delete a specific item, such as a document, your cycle
+    history or a conversation, without closing your account. If you ask us to
+    delete information we are legally required to keep, we will tell you what
+    and why, and delete the rest.
+  </p>
+
+  <h2 id="delete">8. Deleting your account, signing out and revoking access</h2>
+  <p>
+    <strong>Delete your account in the app:</strong> Settings, Delete account.
+    This permanently deletes from our server:
+  </p>
+  <ul>
+    <li>your account, sign-in link, all session tokens and any Sign in with Apple token, and the app check keys of phones you used Red Wellness on;</li>
+    <li>your setup answers, health history and archives, logs, documents, injuries and rehab, plans, reports, chat and what Red remembers;</li>
+    <li>your friendships and sharing settings, and your membership of any training-together goal (shared goals you own end for everyone);</li>
+    <li>records in other users' accounts that name you, such as their blocks and mutes of you.</li>
+  </ul>
+  <p>
+    We aim to complete deletion immediately and in any case within 30 days,
+    and the app confirms when it is done. Deletion also clears Red Wellness's
+    data from your phone: chat threads, meal history, cached health numbers
+    and plans, the widget snapshot and Red Wellness's settings. Deleting the
+    app from your phone also removes everything Red Wellness keeps there.
+  </p>
+  <p>
+    <strong>Sign in with Apple.</strong> Red Wellness is built so that, before
+    deleting your account, our server asks Apple to end Red Wellness's Sign in
+    with Apple access, using the token described in section 2.1, and Apple's
+    sign-in sheet may appear once when you tap Delete account so Apple can
+    give a fresh code. That request to Apple is not yet switched on. Until it
+    is, and whenever the request fails or you cancel the sheet, your account
+    is still deleted, and you can stop using Sign in with Apple with Red
+    Wellness yourself in your Apple Account settings on your iPhone.
+  </p>
+  <p>Some things are not erased by deleting your account:</p>
+  <ul>
+    <li>information Anthropic still holds under section 5.1, which it deletes on its own schedule;</li>
+    <li>notifications and messages already shown to other people;</li>
+    <li>reports other users filed about you, which are kept in the reporter's account (section 6.3). Once your account is gone they no longer lead to your name, Apple ID or data;</li>
+    <li>server logs, until they expire under section 7;</li>
+    <li>period entries Red Wellness wrote into Apple Health, which belong to your Apple Health record. You can delete them in the Health app.</li>
+  </ul>
+  <p>
+    <strong>Signing out</strong> ends Red Wellness's access from that phone
+    straight away and clears your cached plan. Other Red Wellness data on the
+    phone, such as recent chat and meals, stays until you delete the app or
+    your account. Your account and data stay on the server so you can sign
+    back in.
+  </p>
+  <p>
+    <strong>Revoking Apple Health access:</strong>
+    <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Health &rsaquo; Red Wellness</em>
+    on your iPhone (or the Health app, your profile, Apps, Red Wellness), per
+    category. Red Wellness stops receiving that data straight away. Data Red
+    Wellness already holds stays in your account until you delete it or ask
+    us to.
+  </p>
+  <p>
+    If you cannot use the app, email
+    <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>
+    and we will delete your account for you.
+  </p>
+
+  <h2 id="rights">9. Your rights</h2>
+  <p>Under the New Zealand Privacy Act 2020 you can:</p>
+  <ul>
+    <li><strong>Get a copy</strong> of the personal information we hold about you. You can download one in the app at any time: Settings, Download my data saves a file (JSON, a common data format) through your phone's share sheet. It holds your account and settings kept on our server, setup answers, plans, briefs, reports, documents, health history and logs, chat we still hold, what Red remembers, your friends (their display names and what you share with each), the people you have blocked, the reports you have filed, your AI permission history and your training-together goals. It leaves out sign-in tokens and other people's own data, and it does not include settings kept only on your phone, such as your watch model. For anything else, email <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>.</li>
+    <li><strong>Ask us to correct it.</strong> If we do not agree to a correction, you can ask us to attach a statement of the correction you asked for.</li>
+    <li><strong>Ask us to delete it</strong> (section 8).</li>
+    <li><strong>Withdraw permissions</strong> at any time: Apple Health categories in iOS Settings, cycle tracking and other areas in Red Wellness's Settings, sharing switches per friend, notification permission in iOS Settings, and AI processing (Settings, AI, Turn off AI). Red Wellness can't work without AI, so turning it off deletes your account, after you confirm.</li>
+    <li><strong>Complain.</strong> Please contact us first and we will try to put it right. You can complain to the Office of the Privacy Commissioner at any time: <a href="https://www.privacy.org.nz">privacy.org.nz</a>, 0800 803 909. You do not need our permission to do that.</li>
+  </ul>
+  <p>
+    Send requests to
+    <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>.
+    We will respond as soon as reasonably practicable and within 20 working
+    days. We may need to confirm your identity first, usually by asking you to
+    confirm something only you can see in the app, such as your friend code or
+    a recent entry. We do not charge for requests.
+  </p>
+  <p>Red Wellness is offered in New Zealand only.</p>
+
+  <h2 id="security">10. How we protect it</h2>
+  <ul>
+    <li>Sign in with Apple only, so there is no Red Wellness password to be guessed, reused or stolen.</li>
+    <li>Session tokens are stored only in hashed form, and the token on your phone is kept in the iOS Keychain.</li>
+    <li>Requests that cost money or sign you in carry a signature from an Apple-certified key on your phone, so a script pretending to be Red Wellness can be told apart from the app.</li>
+    <li>All traffic between the app, our server and our providers is encrypted in transit (HTTPS/TLS).</li>
+    <li>Data in our database is encrypted at rest by AWS.</li>
+    <li>Access to the server and database is limited to Ruby and protected by multi-factor authentication on the AWS account's sign-in; programmatic access keys are kept only on Ruby's own computer.</li>
+    <li>We keep the number of companies that handle your data to four (AWS, Anthropic, Google and Cloudflare), plus Apple for sign-in.</li>
+  </ul>
+  <p>
+    No system is perfectly secure, and we cannot guarantee that nothing will
+    ever go wrong. Red Wellness is small and run by one person, and we have
+    kept it simple on purpose. Section 11 says what we will do if something
+    does go wrong.
+  </p>
+
+  <h2 id="breach">11. If there is a privacy breach</h2>
+  <p>
+    If a privacy breach happens that it is reasonable to believe has caused or
+    is likely to cause you serious harm, we will notify the
+    <strong>Office of the Privacy Commissioner</strong> and you as soon as
+    practicable, as the Privacy Act 2020 requires. Specifically:
   </p>
   <ul>
     <li>we will tell you what happened, what information was involved and when;</li>
-    <li>we will tell you what we are doing about it and what you may want to do;</li>
-    <li>we will not wait for certainty to warn you if waiting would leave you exposed;</li>
-    <li>we will notify the Privacy Commissioner where the Act requires it.</li>
+    <li>we will tell you what we are doing about it and what you can do to protect yourself;</li>
+    <li>we will not wait for certainty to warn you if waiting would leave you exposed.</li>
   </ul>
 
-  <h2>9. Your rights</h2>
-  <p>Under the New Zealand Privacy Act 2020 you can:</p>
+  <h2 id="age">12. Age</h2>
+  <p>
+    You must be at least 18 to use Red Wellness. Red Wellness asks for your
+    birth year during setup and does not let you continue if you are under 18.
+    Red Wellness is not designed for children. If we learn that someone under
+    that age has an account, we will delete it. If you think a child is using
+    Red Wellness, please tell us at
+    <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>.
+  </p>
+
+  <h2 id="changes">13. Changes to this policy</h2>
+  <p>
+    We will update this policy as Red Wellness changes and change the "Last
+    updated" date at the top. If a change materially affects how we collect,
+    use or share your information, for example a new provider, a new kind of
+    data or a new sharing feature, we will tell you in the app before it takes
+    effect, and where the change needs your permission we will ask for it
+    rather than assume it. Earlier versions are available on request.
+  </p>
+
+  <h2 id="contact">14. Contact</h2>
+  <p>
+    Resonance Labs Limited (NZBN 9429052608933)<br>
+    39 Hankey Street, Mount Cook, Wellington 6011, New Zealand<br>
+    Privacy officer: Ruby Osborne<br>
+    <a href="mailto:privacy@resonancelabs.co.nz">privacy@resonancelabs.co.nz</a>
+  </p>
+
+  <h2 id="appendix-a">Appendix A. Every Apple Health data type Red Wellness can read</h2>
+  <p>
+    Red Wellness asks to read a type only if the area of Red Wellness that
+    uses it is switched on (section 2.3). The names below are the ones the
+    Health app uses. 32 types in all.
+  </p>
+
+  <h3>Fitness</h3>
   <ul>
-    <li>
-      <strong>Access your information.</strong> Ask for a copy of the personal
-      information Red Wellness holds about you, and we will provide it.
-    </li>
-    <li>
-      <strong>Correct it.</strong> If something is wrong, ask us to fix it. If
-      we disagree, you can ask us to attach a statement of your requested
-      correction, and we will.
-    </li>
-    <li>
-      <strong>Have it deleted.</strong> As described in section 7.
-    </li>
-    <li>
-      <strong>Withdraw permissions.</strong> Revoke Apple Health categories in
-      iOS Settings, turn cycle tracking off, or stop using Red Wellness entirely.
-    </li>
-    <li>
-      <strong>Complain.</strong> Email us first and we will try to sort it out.
-      You can also complain to the Office of the Privacy Commissioner at
-      <a href="https://www.privacy.org.nz">privacy.org.nz</a>, and you do not
-      need our permission to do that.
-    </li>
+    <li><strong>Workouts:</strong> type of workout, duration, distance, active energy, and average and highest heart rate for each workout.</li>
+    <li><strong>VO2 Max (Cardio Fitness):</strong> latest value.</li>
+    <li><strong>Steps:</strong> daily total.</li>
+    <li><strong>Active Energy:</strong> daily total.</li>
+    <li><strong>Exercise Minutes:</strong> daily total.</li>
   </ul>
+
+  <h3>Readiness</h3>
+  <ul>
+    <li><strong>Sleep:</strong> total, deep and REM sleep minutes per night.</li>
+    <li><strong>Heart Rate Variability:</strong> overnight average.</li>
+    <li><strong>Resting Heart Rate</strong> (also used by Fitness): daily average.</li>
+    <li><strong>Walking Heart Rate Average:</strong> daily average.</li>
+    <li><strong>Respiratory Rate:</strong> daily average.</li>
+    <li><strong>Blood Oxygen:</strong> daily average.</li>
+    <li><strong>Sleeping Wrist Temperature</strong> (also used by Cycle): nightly average.</li>
+  </ul>
+
+  <h3>Body</h3>
+  <ul>
+    <li><strong>Weight:</strong> latest value each day.</li>
+    <li><strong>Body Fat Percentage:</strong> latest value each day.</li>
+    <li><strong>Lean Body Mass:</strong> latest value each day.</li>
+  </ul>
+
+  <h3>Fuel</h3>
   <p>
-    All requests go to
-    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>. We
-    will respond as soon as we can and within 20 working days, as the Act
-    requires. We may need to confirm you are who you say you are before
-    releasing or deleting health information, which protects you.
+    Daily totals of: Dietary Energy, Protein, Carbohydrates, Total Fat, Fibre,
+    Sugar, Calcium, Iron, Magnesium, Sodium, Potassium, Zinc, Vitamin C,
+    Vitamin D and Caffeine.
   </p>
 
-  <h2>10. Children</h2>
-  <p>
-    Red Wellness is not directed at children and is not intended for anyone under 16.
-    We do not knowingly collect personal information from under-16s. If you
-    believe a child has created an account, email
-    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a> and we
-    will delete the account and its data.
-  </p>
-
-  <h2>11. Changes to this policy</h2>
-  <p>
-    Red Wellness is still being built, so this policy will change as the app does. When
-    it changes we will update this page and the "Last updated" date at the
-    top. If a change materially affects how your personal information is
-    collected, used or shared, for example a new processor or a new data
-    category, we will tell you in the app or by email before it takes effect,
-    and where consent is needed we will ask for it rather than assume it.
-  </p>
-  <p>Older versions are available on request.</p>
-
-  <h2>12. Contact</h2>
-  <p>
-    Ruby Osborne, Auckland, New Zealand.<br>
-    <a href="mailto:ruby.osborne@gmail.com">ruby.osborne@gmail.com</a>
-  </p>
+  <h3>Cycle <span class="tag">opt-in only</span></h3>
+  <ul>
+    <li><strong>Menstrual Flow:</strong> flow level and period start; Red Wellness also writes entries you log.</li>
+    <li><strong>Spotting (Intermenstrual Bleeding):</strong> Red Wellness asks to read this but does not currently use it; Red Wellness writes entries you log.</li>
+  </ul>
 
   <footer>
     <a href="index.html">Red Wellness legal</a> &middot;
+    <a href="ai.html">How Red uses AI</a> &middot;
     <a href="terms.html">Terms of Service</a>
   </footer>
 </main>

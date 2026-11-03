@@ -120,6 +120,11 @@
     estimates are all written by Claude. That's what makes Red a coach rather
     than a tracker: it reads your own numbers and writes advice for you.
   </p>
+  <p>
+    Because it is written by AI, it can be wrong. Red Wellness tells you so
+    when you sign up and in Settings, and every morning brief ends with
+    "Red, your AI wellness coach".
+  </p>
 
   <h2 id="journey">Where your data goes</h2>
   <p>Here is exactly what happens when Red Wellness writes something for you.</p>
@@ -147,16 +152,18 @@
   <p>Depending on the job, Red Wellness can send Anthropic:</p>
   <ul>
     <li>your name and setup answers, including anything you wrote about conditions, injuries or medications, word for word;</li>
+    <li>your list of injuries and rehab, including any rehab or physio programme you added, word for word, with its end point and whether it is active or resolved. A programme you add from a PDF, photo or camera scan is read on your phone and has identifying details such as your name and contact details removed before it leaves your phone, but it can still name your physio or clinic;</li>
     <li>your goals, plan, training history and logs, and your notes, check-ins and pain entries;</li>
     <li>recent Apple Health numbers (daily values for up to the last 28 days), such as sleep, heart rate, heart rate variability, weight, workouts, nutrition and, if you track it, your cycle, plus the scores and trends Red Wellness works out from them;</li>
     <li>your chat messages;</li>
     <li>the short list of things Red remembers about you (see <a href="#memory">What the AI remembers</a>);</li>
     <li>Red's own earlier plans and briefs, so its advice stays consistent;</li>
-    <li>for the monthly report, the text of lab results or scans you add;</li>
-    <li>if you train together with someone, the goal's name and its owner's display name.</li>
+    <li>for the monthly report, the text of lab results or scans you add, with identifying details removed on your phone first;</li>
+    <li>if you train together with someone, the goal's name, its owner's display name and, if you follow the owner's weekly pattern, the kinds of sessions on the owner's days.</li>
   </ul>
   <p>What isn't sent:</p>
   <ul>
+    <li><strong>Pictures.</strong> When you scan a barcode, a label, a document or a rehab programme, the image is read on your phone and never leaves it.</li>
     <li><strong>Your voice.</strong> If you log by voice, your speech is turned into text on your phone. The audio is never saved and never leaves your phone. Only the text, after you've seen it, is sent.</li>
     <li><strong>More than the job needs.</strong> Food logging sends only the text of what you ate. Saying or typing a recipe's ingredient list sends only that list.</li>
   </ul>
@@ -185,7 +192,8 @@
     can coach you better, like "prefers evening sessions" or "walks the dog
     in the mornings". It holds up to 30 short items. Red picks them from your
     messages, skips passing comments and anything already logged elsewhere
-    (such as pain, goals, training and food), and tidies the list once a
+    (such as pain, injury, illness, medical conditions, medication, goals,
+    training and food), and tidies the list once a
     week, merging repeats and dropping things whose time has passed. The list
     is sent to Claude with each plan, brief, report and chat reply.
   </p>
