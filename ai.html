@@ -224,8 +224,13 @@
     Red Wellness, can access the database only to keep the service running or fix a
     problem, and reads a report only if someone reports you. If you use
     Report issue on one of Red's replies, Ruby reads that reply, your message
-    before it and your note, so she can fix what went wrong. A report is not
-    sent to Anthropic.
+    before it and your note, so she can fix what went wrong. The app also
+    checks every reply automatically (a card with no words, an empty reply, or
+    the same question asked again within about a minute), and Ruby reads a
+    flagged reply with the question that led to it. She also reads the
+    questions the app answered on your phone without Claude, to catch ones it
+    misunderstood. These are kept 90 days. Reports, flags and those questions
+    are not sent to Anthropic.
   </p>
 
   <h2 id="turn-off">Withdrawing (turning AI off)</h2>
