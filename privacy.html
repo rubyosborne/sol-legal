@@ -163,6 +163,7 @@
     <li><strong>Session tokens.</strong> When you sign in on a device, we issue a token so the app stays signed in. We store only a one-way scrambled (<strong>hashed</strong>) version of it.</li>
     <li><strong>Sign in with Apple token.</strong> When you sign in, Apple gives the app a one-time code. Our server can swap it with Apple for a token that lets us end Red Wellness's Sign in with Apple access when you delete your account (section 8). When we hold one, we store the newest one on its own, use it for nothing else, never write it to our logs, and delete it with your account.</li>
     <li><strong>App check key.</strong> The app makes a key on your phone that Apple certifies as belonging to a genuine copy of Red Wellness (Apple App Attest). We store the public half of that key, a counter, and which Red Wellness account last used it, so our server can tell real app requests from imitations. It says nothing about you or your health.</li>
+    <li><strong>Push notification token.</strong> If you allow notifications, Apple gives the app a token that lets our server send notifications to that phone through Apple's push service (section 5.1). We store it with your account, together with a random identifier for that copy of the app, whether it is a test or App Store build, your Morning readiness and Morning plan notification switches, a one-way scrambled (hashed) copy of that phone's session token, and when it was last updated. We use it only to send your morning notifications, and never write it to our logs. It says nothing about your health.</li>
     <li><strong>Your AI permission.</strong> A record of the permission you gave for AI processing: when, which wording you saw and which app version. We keep the history of any changes and delete it with your account.</li>
     <li><strong>Time zone and app settings</strong>, such as which areas of Red Wellness you have switched on and how you like notifications.</li>
     <li>There is no Red Wellness password. We never see, hold or store one.</li>
@@ -476,6 +477,9 @@
     the App Store. We check your sign-in with Apple's servers. Apple's own use
     of your information is covered by Apple's privacy policy, not this one.
   </p>
+  <p>
+    <strong>Apple Push Notification service.</strong> Your morning notifications are sent by our server through Apple's push service, using your phone's push notification token (section 2.1). The text of each one passes through Apple's servers on its way to your phone: the Readiness notification carries Red's one-sentence read of your readiness for the day (for example "You're good to go, solid sleep and HRV right on your normal."), and the Today notification carries the title of today's session and its short note (for example "Easy run · 30 min, keep it conversational"). If your phone is off or offline, Apple holds the notification until it can deliver it, for at most 6 hours. Like any notification, they show on your lock screen, where anyone holding your phone can read them, unless you change Show Previews for Red Wellness in iOS Settings, Notifications. You can switch either one off in Red Wellness's Settings, Notifications, or turn off all of Red Wellness's notifications in iOS Settings. Red Wellness's other notifications are still made on your phone and do not go through Apple's push service.
+  </p>
 
   <h3>5.2 Your consent to sending data overseas</h3>
   <p>
@@ -657,6 +661,7 @@
     <li><strong>Session tokens:</strong> until you sign out on that device or delete your account.</li>
     <li><strong>Sign in with Apple token:</strong> until you delete your account. Each sign-in replaces it with a new one.</li>
     <li><strong>App check key:</strong> until you delete your account, or 180 days after the app last used it.</li>
+    <li><strong>Push notification token:</strong> until you delete your account, or until Apple tells us it no longer works (for example after you delete the app). After you sign out on a phone, our server stops sending to it and deletes its token the next time it sends your morning notifications.</li>
     <li><strong>Server logs:</strong> 7 days.</li>
     <li><strong>Reports you file about another user:</strong> kept until you delete your account, and deleted with it. Also kept after the reported account is deleted, when the report no longer leads to that person's name, Apple ID or data.</li>
     <li><strong>Replies you report:</strong> 90 days, then our database deletes the report automatically (which can take a few more days). Deleted sooner if you delete your account. We delete the email copy from our mailbox within 90 days.</li>
@@ -681,7 +686,7 @@
     This permanently deletes from our server:
   </p>
   <ul>
-    <li>your account, sign-in link, all session tokens and any Sign in with Apple token, and the app check keys of phones you used Red Wellness on;</li>
+    <li>your account, sign-in link, all session tokens and any Sign in with Apple token, and the app check keys and push notification tokens of phones you used Red Wellness on;</li>
     <li>your setup answers, health history and archives, logs, documents, injuries and rehab, plans, reports, replies you reported, exercises you asked us to add, questions the app answered on your phone, replies the app flagged, chat, tapping and meditation sessions and topics, and what Red remembers;</li>
     <li>your friendships and sharing settings, and your membership of any training-together goal (shared goals you own end for everyone);</li>
     <li>records in other users' accounts that name you, such as their blocks and mutes of you.</li>
