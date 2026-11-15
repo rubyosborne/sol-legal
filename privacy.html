@@ -100,7 +100,7 @@
   <a class="back" href="index.html">&larr; Red Wellness legal</a>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 2026-11-12</p>
+  <p class="updated">Last updated: 2026-11-15</p>
 
   <div class="summary">
     <h2>The short version</h2>
@@ -111,6 +111,7 @@
       <li>Your Red Wellness account data is stored with Amazon Web Services (AWS) in <strong>Sydney, Australia</strong>.</li>
       <li>Emails you send us (to support@, hello@ or privacy@) are forwarded by Cloudflare and stored in Google's Gmail, which keeps mail in the United States and other countries.</li>
       <li>To write your plans, briefs, monthly reports and chat replies, Red Wellness sends the information needed to <strong>Anthropic</strong>, a US company, whose Claude AI models do the writing. Anthropic stores it in the United States and may process it in other countries. This includes health information, such as anything you tell Red Wellness about injuries, conditions or medications, a rehab or physio programme you add, things you choose to log such as alcohol, medication taken or the supplements you take, and the text of lab results you add. Anthropic <strong>does not train its models on that information</strong> and deletes it within 30 days, with limited exceptions explained in section 5.</li>
+      <li>If you turn on weather, your phone sends its approximate location straight to Apple Weather for the forecast. Red Wellness never receives or stores your location.</li>
       <li>Red keeps a short list of things you've told it so it can coach you better. You can see and delete it in Settings, What Red remembers.</li>
       <li>If you choose things to log, such as sauna or eating late, Red Wellness looks for patterns between them and your own sleep, recovery and training, only ever in your own data. Friends never see them.</li>
       <li>If you use tapping or meditation, Red Wellness keeps your sessions, including what you type in them, until you delete them. What you type in a session never goes to the AI or into our server logs. The topics you give a session go to Anthropic only if you choose that.</li>
@@ -338,9 +339,26 @@
     the same as if you had typed it.
   </p>
 
-  <h3>2.8 What Red Wellness does not collect</h3>
+  <h3>2.8 Weather</h3>
+  <p>
+    <span class="tag">opt-in only</span> If you turn on weather (during setup,
+    or in Settings, Weather on Home), Red Wellness shows a short forecast at
+    the top of Home, such as "Raining in 3 hours". To do that, it asks iOS
+    for your <strong>approximate location</strong>, only while you are using
+    the app. Your phone sends that approximate location
+    <strong>directly to Apple's weather service</strong> (Apple Weather,
+    through Apple's WeatherKit) to get the forecast. Your location is
+    <strong>never sent to Red Wellness's server</strong>, never saved on
+    your phone or anywhere else by Red Wellness, and never given to the AI.
+    The forecast is kept in your phone's memory only, and is fetched again
+    at most every 30 minutes while the app is open. You can turn weather
+    off in Settings, Weather on Home, or turn off location for Red Wellness
+    in iOS Settings at any time; Home then shows the date instead.
+  </p>
+
+  <h3>2.9 What Red Wellness does not collect</h3>
   <ul>
-    <li>No location, contacts, or photo library access. (When you add a document, you pick the single file yourself.)</li>
+    <li>No contacts or photo library access, and no location except the approximate location your phone sends straight to Apple for the weather, if you turn it on (section 2.8). (When you add a document, you pick the single file yourself.)</li>
     <li>No camera images. Red Wellness uses your camera only to scan a food barcode, to photograph a food's nutrition label, or to scan a paper rehab or physio programme, and only while you are doing it. The image is read on your phone and is never saved or sent anywhere. Only the barcode number, the nutrition values you check and save, or the programme text you check and save (with identifying details removed) go to Red Wellness's server.</li>
     <li>No advertising identifier, device fingerprinting or cross-app tracking.</li>
     <li>No analytics, crash-reporting or advertising tools from other companies.</li>
@@ -484,6 +502,13 @@
     <strong>Apple.</strong> Apple provides Sign in with Apple, Apple Health and
     the App Store. We check your sign-in with Apple's servers. Apple's own use
     of your information is covered by Apple's privacy policy, not this one.
+  </p>
+  <p>
+    <strong>Apple Weather (WeatherKit).</strong> If you turn on weather, your
+    phone asks Apple's weather service for the forecast, sending it your
+    approximate location (section 2.8). This request goes from your phone to
+    Apple, not through Red Wellness's server, and we never see your location.
+    Apple's handling of it is covered by Apple's privacy policy.
   </p>
   <p>
     <strong>Apple Push Notification service.</strong> Your morning notifications are sent by our server through Apple's push service, using your phone's push notification token (section 2.1). The text of each one passes through Apple's servers on its way to your phone: the Readiness notification carries Red's one-sentence read of your readiness for the day (for example "You're good to go, solid sleep and HRV right on your normal."), and the Today notification carries the title of today's session and its short note (for example "Easy run · 30 min, keep it conversational"). If your phone is off or offline, Apple holds the notification until it can deliver it, for at most 6 hours. Like any notification, they show on your lock screen, where anyone holding your phone can read them, unless you change Show Previews for Red Wellness in iOS Settings, Notifications. You can switch either one off in Red Wellness's Settings, Notifications, or turn off all of Red Wellness's notifications in iOS Settings. Red Wellness's other notifications are still made on your phone and do not go through Apple's push service.
