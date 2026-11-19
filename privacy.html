@@ -164,7 +164,7 @@
     <li><strong>Session tokens.</strong> When you sign in on a device, we issue a token so the app stays signed in. We store only a one-way scrambled (<strong>hashed</strong>) version of it.</li>
     <li><strong>Sign in with Apple token.</strong> When you sign in, Apple gives the app a one-time code. Our server can swap it with Apple for a token that lets us end Red Wellness's Sign in with Apple access when you delete your account (section 8). When we hold one, we store the newest one on its own, use it for nothing else, never write it to our logs, and delete it with your account.</li>
     <li><strong>App check key.</strong> The app makes a key on your phone that Apple certifies as belonging to a genuine copy of Red Wellness (Apple App Attest). We store the public half of that key, a counter, and which Red Wellness account last used it, so our server can tell real app requests from imitations. It says nothing about you or your health.</li>
-    <li><strong>Push notification token.</strong> If you allow notifications, Apple gives the app a token that lets our server send notifications to that phone through Apple's push service (section 5.1). We store it with your account, together with a random identifier for that copy of the app, whether it is a test or App Store build, your Morning readiness, Morning plan and Friend alerts notification switches, a one-way scrambled (hashed) copy of that phone's session token, and when it was last updated. We use it only to send your morning notifications, and never write it to our logs. It says nothing about your health.</li>
+    <li><strong>Push notification token.</strong> If you allow notifications, Apple gives the app a token that lets our server send notifications to that phone through Apple's push service (section 5.1). We store it with your account, together with a random identifier for that copy of the app, whether it is a test or App Store build, your Morning readiness, Morning plan and Friend alerts notification switches, a one-way scrambled (hashed) copy of that phone's session token, and when it was last updated. We use it only to send your notifications, and never write it to our logs. It says nothing about your health.</li>
     <li><strong>Your AI permission.</strong> A record of the permission you gave for AI processing: when, which wording you saw and which app version. We keep the history of any changes and delete it with your account.</li>
     <li><strong>Time zone and app settings</strong>, such as which areas of Red Wellness you have switched on and how you like notifications.</li>
     <li>There is no Red Wellness password. We never see, hold or store one.</li>
@@ -462,7 +462,7 @@
     <li>for the monthly report, the values and <strong>the text read from your two most recent documents of each kind, with identifying details removed (section 2.4)</strong>, such as lab results and body-composition scans;</li>
     <li>for food logging, the text of what you ate and the names of up to 60 of your saved foods and recipes (names only, never their nutrition, other names or barcodes), so a food you describe differently can be matched to the one you saved, and for a recipe's ingredient list you say or type, only that list;</li>
     <li>when you ask Red for swaps for an exercise in today's session, only that part of the session (its exercises with their sets, reps, loads and instructions), the session's title and summary, your "Always work around" list, your injuries and, for a rehab drill, the rehab item it belongs to with its programme;</li>
-    <li>if you train together, the goal's name, the display names of the people you train with and, if you follow the owner's weekly pattern, the kinds of sessions on the owner's days.</li>
+    <li>if you train together, the goal's name, the display names of the people you train with and, if you follow the owner's weekly pattern, the kinds of sessions on the owner's days and the exercises in them (movements, sets and reps, and how each session is laid out; never the owner's weights, paces or heart rates). If you own the goal, this means the kinds and exercises of your sessions are sent when the week of a member who follows your pattern is built (section 6.2).</li>
   </ul>
   <div class="callout">
     <p>
@@ -511,7 +511,7 @@
     Apple's handling of it is covered by Apple's privacy policy.
   </p>
   <p>
-    <strong>Apple Push Notification service.</strong> Your morning notifications are sent by our server through Apple's push service, using your phone's push notification token (section 2.1). The text of each one passes through Apple's servers on its way to your phone: the Readiness notification carries Red's one-sentence read of your readiness for the day (for example "You're good to go, solid sleep and HRV right on your normal."), and the Today notification carries the title of today's session and its short note (for example "Easy run · 30 min, keep it conversational"). If your phone is off or offline, Apple holds the notification until it can deliver it, for at most 6 hours. Like any notification, they show on your lock screen, where anyone holding your phone can read them, unless you change Show Previews for Red Wellness in iOS Settings, Notifications. You can switch either one off in Red Wellness's Settings, Notifications, or turn off all of Red Wellness's notifications in iOS Settings. Red Wellness's other notifications are still made on your phone and do not go through Apple's push service.
+    <strong>Apple Push Notification service.</strong> Your morning notifications are sent by our server through Apple's push service, using your phone's push notification token (section 2.1). The text of each one passes through Apple's servers on its way to your phone: the Readiness notification carries Red's one-sentence read of your readiness for the day (for example "You're good to go, solid sleep and HRV right on your normal."), and the Today notification carries the title of today's session and its short note (for example "Easy run · 30 min, keep it conversational"). If your phone is off or offline, Apple holds the notification until it can deliver it, for at most 6 hours. Like any notification, they show on your lock screen, where anyone holding your phone can read them, unless you change Show Previews for Red Wellness in iOS Settings, Notifications. You can switch either one off in Red Wellness's Settings, Notifications, or turn off all of Red Wellness's notifications in iOS Settings. Two other kinds of notification are sent the same way. Training together alerts (section 6.2) carry a training partner's display name and what that section lists, for example "Sam just completed a 14 km run at 5:30 pace", or say that a shared goal ended or that someone left it. The notification that a new plan is ready to review says only that. Apple holds either kind for at most 24 hours. You can switch off all training together alerts on a phone with Friend alerts in Red Wellness's Settings, Notifications. Red Wellness's other notifications are still made on your phone and do not go through Apple's push service.
   </p>
 
   <h3>5.2 Your consent to sending data overseas</h3>
@@ -646,16 +646,28 @@
         <li>reaching 25, 50, 75 or 100 percent of the target, with the goal's name.</li>
       </ul>
     </li>
+    <li>a notification to every member if a goal you own ends (because you ended it, changed your training goal or joined someone else's goal), and a notification to the owner if you leave a goal. Each carries your display name and the goal's name, and never says why.</li>
   </ul>
   <p>You see the same about the other members.</p>
   <p>
     If you choose to follow the goal owner's weekly pattern, Red Wellness uses
-    only the kinds of sessions on each of the owner's days, never their
-    numbers.
+    the kind of session on each of the owner's days (for example a run or
+    strength, and whether it is easy, hard or long) and the exercises written
+    in the owner's most recent session of that kind: the movements with their
+    sets and reps, and how the session is laid out, such as how many repeats
+    a run has and how far each one is. These are placed on your own training
+    days and go into your plan, where you can see them. Every weight, pace,
+    heart rate, zone and effort rating is taken out first. Nothing is copied
+    from a rehab, physio or recovery session, or from a session that was held
+    back or cut short, and Red Wellness leaves out any line it recognises as
+    being about an injury, pain, illness, a cycle, medication, sleep or a
+    heart reading. This happens only while the owner shares their training
+    with you and has given permission for AI processing, because it is sent
+    to Anthropic when your week is built (section 5.1).
   </p>
   <p>
-    Everyone's plan is built from their own data, and nobody's numbers are
-    copied into anyone else's account. You can leave at any time, the owner
+    Everyone's plan is sized from their own data: nobody's weights, paces or
+    heart rates are copied into anyone else's account. You can leave at any time, the owner
     can end the goal, and blocking or removing someone takes them out of any
     goal you share. You can mute one person's notifications without leaving,
     or switch off all friend alerts on a phone in Settings.
@@ -695,7 +707,7 @@
     <li><strong>Session tokens:</strong> until you sign out on that device or delete your account.</li>
     <li><strong>Sign in with Apple token:</strong> until you delete your account. Each sign-in replaces it with a new one.</li>
     <li><strong>App check key:</strong> until you delete your account, or 180 days after the app last used it.</li>
-    <li><strong>Push notification token:</strong> until you delete your account, or until Apple tells us it no longer works (for example after you delete the app). After you sign out on a phone, our server stops sending to it and deletes its token the next time it sends your morning notifications.</li>
+    <li><strong>Push notification token:</strong> until you delete your account, or until Apple tells us it no longer works (for example after you delete the app). After you sign out on a phone, our server stops sending to it and deletes its token the next time it sends you a notification.</li>
     <li><strong>Server logs:</strong> 7 days.</li>
     <li><strong>Reports you file about another user:</strong> kept until you delete your account, and deleted with it. Also kept after the reported account is deleted, when the report no longer leads to that person's name, Apple ID or data.</li>
     <li><strong>Replies you report:</strong> 90 days, then our database deletes the report automatically (which can take a few more days). Deleted sooner if you delete your account. We delete the email copy from our mailbox within 90 days.</li>
